@@ -13,7 +13,7 @@
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  传送门：[angulat4后台管理系统](https://github.com/Alex-0407/ng4-grace)
+>  传送门：[angulat4后台管理系统](https://github.com/Alex-0407/vue2-admin-grace)
 
 
 ## 技术栈
@@ -26,7 +26,7 @@ ionic3
 ```
 git clone https://github.com/Alex-0407/ionic3-awesome
 
-cd vue2-admin-grace 
+cd ionic3-awesome 
 
 npm install
 
