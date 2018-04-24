@@ -1,11 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+    <ion-title>About</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-
+  <div class="wrap">
+    <ion-qrcode [data]="'http://weixin.qq.com/r/DjhpcbHEj_zwrfUS920c'" [size]="180" [level]="'H'"
+                [logo]="'assets/imgs/wechat-gh.jpg'" [foreground]="'black'"></ion-qrcode>
+    <div class="intro">
+      <h5>扫一扫上面的二维码</h5>
+      <h5>关注微信公众号——<b>全栈弄潮儿</b></h5>
+      <h5><i>获取更多学习资源及技术文章</i></h5>
+    </div>
+  </div>
 </ion-content>

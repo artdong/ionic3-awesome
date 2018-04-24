@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import {AboutPage} from "./about";
+import {SharedModule} from "../../modules/shared.module";
 
 @NgModule({
   declarations: [
@@ -8,6 +9,9 @@ import {AboutPage} from "./about";
   ],
   imports: [
     IonicPageModule.forChild(AboutPage),
+    SharedModule
+  ],
+  entryComponents: [
   ],
   providers: [
   ]

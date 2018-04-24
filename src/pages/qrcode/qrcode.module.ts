@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import {QrCodePage} from "./qrcode";
-import {QrCodeComponent} from "../../components/qrcode/qrcode";
+import {SharedModule} from "../../modules/shared.module";
 
 @NgModule({
   declarations: [
-    QrCodePage,
-    QrCodeComponent
+    QrCodePage
   ],
   imports: [
-    IonicPageModule.forChild(QrCodePage)
+    IonicPageModule.forChild(QrCodePage),
+    SharedModule
   ],
   entryComponents: [
-    QrCodeComponent
   ],
   providers: [
   ]
