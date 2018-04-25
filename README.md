@@ -2,7 +2,7 @@
 
 ## About
 
-此项目是ionic3开源项目 。
+此项目是ionic3开源项目 。贡献代码请提供email。
 
 
 ## 来了就留个 :feet:吧，star一下证明你来过  :stuck_out_tongue_closed_eyes:
