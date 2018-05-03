@@ -2,7 +2,7 @@
 
 ## About
 
-此项目是ionic3开源项目 。
+此项目是ionic3开源项目 。贡献代码请提供email。
 
 
 ## 来了就留个 :feet:吧，star一下证明你来过  :stuck_out_tongue_closed_eyes:
@@ -38,7 +38,9 @@ ionic cordova run build android (安卓打包发布)
 
 ionic cordova run build ios (安卓打包发布)
 ```
+### 效果预览
 
+![动态图](https://github.com/alex-0407/ionic3-awesome/blob/master/src/assets/screen/ionic3-awesome.gif?raw=true)
 
 #### 欢迎关注我的微信公众号或头条号`全栈弄潮儿` ，获取更多学习资源及技术文章等
 
