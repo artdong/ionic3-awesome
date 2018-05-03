@@ -1,0 +1,43 @@
+.dark-theme {
+  $dark-color: #488AFF;
+  ion-content {
+    //background-color: #090f2f;
+    //color: #8a4182;
+  }
+
+  .toolbar-title {
+    color: #fff;
+  }
+
+  .header .toolbar-background {
+    background-color: $dark-color;
+  }
+
+  .toolbar-background-md{
+    background-color: $dark-color;
+  }
+
+  .tabs-md {
+    .tab-button {
+      //color: gray;
+      //background-color: #488AFF;
+    }
+    .tab-button[aria-selected="true"] {
+      color: $dark-color;
+      .tab-button-icon {
+        color: $dark-color;
+      }
+    }
+    .tab-button-icon {
+      //color: gray;
+    }
+  }
+
+  .theme-icon {
+    color: $dark-color;
+  }
+
+  .theme-button-bg{
+    background-color: $dark-color;
+  }
+}

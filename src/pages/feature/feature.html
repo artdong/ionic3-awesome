@@ -10,8 +10,13 @@
   <ion-list>
     <ion-item>
       <ion-item (click)="goToQrcode();">
-        <ion-icon name="barcode" item-start></ion-icon>
+        <ion-icon name="barcode" item-start class="theme-icon"></ion-icon>
         qrcode
+      </ion-item>
+      <ion-item (click)="changeTheme();">
+        <ion-icon name="moon" item-start class="theme-icon" *ngIf="selectedTheme === 'dark-theme'"></ion-icon>
+        <ion-icon name="sunny" item-start class="theme-icon" *ngIf="selectedTheme === 'light-theme'"></ion-icon>
+        changeTheme
       </ion-item>
     </ion-item>
   </ion-list>
