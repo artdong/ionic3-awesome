@@ -1,0 +1,47 @@
+ion-grid9 {
+  .card-md {
+    margin: 0 0 12px 0;
+    width: 100%;
+    box-shadow: none;
+  }
+  .card-header {
+    border-bottom: 1px solid #DDDDDD !important;
+  }
+  .card-title{
+    margin: 2px 0 0 10px;
+    color: #666666;
+    font-size: 16px;
+  }
+  .card-content {
+    padding: 7px 7px;
+    line-height: 1.5;
+    height: 40px;
+  }
+  .col {
+    min-width: 33.3333%;
+    max-width: 33.3333%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+  }
+  .p-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+  }
+  .img {
+    height: 35px;
+    width: 35px;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+  .name{
+     color: #333333;
+     margin-top: 10px;
+     margin-bottom: 10px;
+  }
+}

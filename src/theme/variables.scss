@@ -103,3 +103,17 @@ $colors: (
 @import "theme.light";
 @import "theme.dark";
 
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.back-button.show-back-button {
+  z-index: 9999;
+  color: white;
+}
+

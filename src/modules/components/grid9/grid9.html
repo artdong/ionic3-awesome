@@ -1,0 +1,19 @@
+<ion-card>
+  <ion-card-content class="card-header" *ngIf="showTitle">
+    <div class="card-title">
+      {{data.name}}
+    </div>
+  </ion-card-content>
+  <ion-row>
+    <ion-col class="col"
+             *ngFor="let module of data.modules">
+      <div (click)="detail(module)">
+        <div class="p-img">
+          <img class="img" [src]="module.image"/>
+        </div>
+        <div class="name">{{module.name}}</div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-card>
+
