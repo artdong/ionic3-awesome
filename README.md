@@ -48,6 +48,6 @@ ionic cordova run build ios (安卓打包发布)
 
 <img src="https://github.com/Alex-0407/sinacloud-node/blob/master/fullstack-8cm.jpg" width="320px" style="display:inline;">
 
-#### 随意打赏
+#### 提问专区
 
-<img src="https://github.com/alex-0407/vue2-admin-grace/blob/develop/assets/images/%E8%B5%9E%E8%B5%8F%E7%A0%812.jpg" width="320px" style="display:inline;">
+<img src="https://github.com/alex-0407/ionic3-awesome/blob/develop/src/assets/imgs/question.jpg" width="320px" style="display:inline;">
