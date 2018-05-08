@@ -18,6 +18,12 @@ export class Grid9Component {
     if (!module.isThirdParty) {
       this.navCtrl.push(module.link, {item: module});
       return;
+    } else {
+      let browser = {
+        title: module.name,
+        url: module.link
+      };
+      this.navCtrl.push('browser', {browser: browser});
     }
   }
 }

@@ -1,0 +1,20 @@
+<ion-header no-shadow>
+  <ion-navbar class="page-navbar">
+    <ion-title>{{browser.title}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more" style="color: white"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="content">
+  <!--scroll="true" overflow-scroll="true"-->
+  <div class="progress" [hidden]="browser.isLoaded">
+    <div class="progress-inner" id="progress"></div>
+  </div>
+
+  <iframe #iframe id="iframe" class="iframe" sandbox="allow-scripts allow-top-navigation allow-pointer-lock allow-same-origin allow-popups allow-forms allow-modals"
+    [src]="browser.secUrl" (load)="loaded()" >
+  </iframe>
+</ion-content>
