@@ -17,10 +17,11 @@
   </ion-list>
   <ion-list no-lines="true">
     <ion-item class="item-bottom-line">
-      <ion-icon name="female" class="theme-icon" item-start></ion-icon>
+      <ion-icon name="female" class="theme-icon" item-start *ngIf="item.gender=='女'"></ion-icon>
+      <ion-icon name="male" class="theme-icon" item-start *ngIf="item.gender=='男'"></ion-icon>
       性别
       <ion-note item-end>
-        {{item ? item.genderName : ''}}
+        {{item ? item.gender : ''}}
       </ion-note>
     </ion-item>
   </ion-list>

@@ -6,14 +6,14 @@
 
 <ion-content>
   <ion-list no-lines="true">
-    <ion-item (click)="goToQrcode();">
-      <ion-icon name="barcode" item-start class="theme-icon"></ion-icon>
-      qrcode
-    </ion-item>
     <ion-item (click)="changeTheme();">
       <ion-icon name="moon" item-start class="theme-icon" *ngIf="selectedTheme === 'dark-theme'"></ion-icon>
       <ion-icon name="sunny" item-start class="theme-icon" *ngIf="selectedTheme === 'light-theme'"></ion-icon>
-      changeTheme
+      主题
+    </ion-item>
+    <ion-item (click)="goToQrcode();">
+      <ion-icon name="barcode" item-start class="theme-icon"></ion-icon>
+      二维码
     </ion-item>
     <ion-item (click)="goToGrid9();" *ngIf="false">
       <ion-icon name="grid" item-start class="theme-icon"></ion-icon>

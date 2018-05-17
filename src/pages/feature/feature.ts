@@ -35,7 +35,7 @@ export class FeaturePage {
         "moduleId": 2,
         "moduleGroupId": 1,
         "moduleGroupName": null,
-        "name": "about",
+        "name": "关于",
         "key": "about",
         "category": "about",
         "image": "http://iconfont.alicdn.com/t/1508911280546.jpg@100h_100w.jpg",

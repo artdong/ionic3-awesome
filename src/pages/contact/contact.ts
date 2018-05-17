@@ -22,11 +22,10 @@ export class ContactPage implements AfterViewInit {
       "id": "A",
       "items": [{
         "name": "阿珂",
-        "gender": 2,
         "avatar": "assets/imgs/ake.jpg",
         "phone": "13900010008",
         "mail": "ake@163.com",
-        "genderName": "女",
+        "gender": "女",
         "fl": "A"
       }]
     }, {
@@ -36,7 +35,7 @@ export class ContactPage implements AfterViewInit {
         "avatar": "assets/imgs/daji.jpg",
         "phone": "1390011011",
         "mail": "daji@163.com",
-        "genderName": "女",
+        "gender": "女",
         "fl": "D"
       },
         {
@@ -44,7 +43,7 @@ export class ContactPage implements AfterViewInit {
           "avatar": "assets/imgs/diaochan.jpg",
           "phone": "13900010001",
           "mail": "diaochan@163.com",
-          "genderName": "女",
+          "gender": "女",
           "fl": "D"
         },
         {
@@ -52,7 +51,7 @@ export class ContactPage implements AfterViewInit {
           "avatar": "assets/imgs/direnjie.jpg",
           "phone": "13900010001",
           "mail": "direnjie@163.com",
-          "genderName": "男",
+          "gender": "男",
           "fl": "D"
         }]
     }, {
@@ -62,7 +61,7 @@ export class ContactPage implements AfterViewInit {
         "avatar": "assets/imgs/houzi.jpg",
         "phone": "13900010002",
         "mail": "houzi@163.com",
-        "genderName": "男",
+        "gender": "男",
         "fl": "H"
       }]
     }, {
@@ -72,7 +71,7 @@ export class ContactPage implements AfterViewInit {
         "avatar": "assets/imgs/libai.jpg",
         "phone": "13900011012",
         "mail": "libai@163.com",
-        "genderName": "男",
+        "gender": "男",
         "fl": "L"
       }]
     }, {
@@ -82,7 +81,7 @@ export class ContactPage implements AfterViewInit {
         "avatar": "assets/imgs/nakelulu.jpg",
         "phone": "13900011012",
         "mail": "nakelulu@163.com",
-        "genderName": "女",
+        "gender": "女",
         "fl": "N"
       }]
     }, {
@@ -92,7 +91,7 @@ export class ContactPage implements AfterViewInit {
         "avatar": "assets/imgs/xiahoudun.jpg",
         "phone": "13900011012",
         "mail": "xiahoudun@163.com",
-        "genderName": "男",
+        "gender": "男",
         "fl": "X"
       }]
     }, {
@@ -102,14 +101,14 @@ export class ContactPage implements AfterViewInit {
         "avatar": "assets/imgs/zhaoyun.jpg",
         "phone": "13900011012",
         "mail": "zhaoyun@163.com",
-        "genderName": "男",
+        "gender": "男",
         "fl": "Z"
       }, {
         "name": "甄姬",
         "avatar": "assets/imgs/zhenji.jpg",
         "phone": "13900010004",
         "mail": "zhenji@163.com",
-        "genderName": "女",
+        "gender": "女",
         "fl": "Z"
       }]
     }];
