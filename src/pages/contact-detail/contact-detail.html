@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-list no-border no-lines="true">
+    <ion-item-divider no-border no-lines="true" color="light"></ion-item-divider>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img
+          [src]="item ? item.avatar : 'https://raw.githubusercontent.com/ionic-team/ionic-preview-app/master/src/assets/img/avatar-ts-woody.png'">
+      </ion-thumbnail>
+      <h2>{{item ? item.name : 'zhangsan'}}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-list no-lines="true">
+    <ion-item class="item-bottom-line">
+      <ion-icon name="female" class="theme-icon" item-start></ion-icon>
+      性别
+      <ion-note item-end>
+        {{item ? item.genderName : ''}}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list no-lines="true">
+    <ion-item class="item-bottom-line">
+      <ion-icon name="call" class="theme-icon" item-start></ion-icon>
+      电话
+      <ion-note item-end>
+        {{item ? item.phone : '12345678123'}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail" class="theme-icon" item-start></ion-icon>
+      邮箱
+      <ion-note item-end>
+        {{item ? item.mail : '666666@qq.com'}}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>通讯录</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <div top>
+    <ion-searchbar [(ngModel)]="searchText" (ionInput)="getCurrentItems($event)" (ionClear)="onClearFilter($event)" placeholder="搜索"></ion-searchbar>
+  </div>
+  <ion-alpha-list [hasTop]="true" *ngIf="!isFilter">
+    <ng-container *ngFor="let i of data">
+      <ion-alpha-section [index]="i.id">
+        <ng-container *ngFor="let contact of i.items">
+          <ion-alpha-cell>
+            <ion-item (click)="goDetail(contact);">
+              <ion-avatar item-start>
+                <img [src]="contact.avatar" class="img"/>
+              </ion-avatar>
+              <ion-label>
+                <h2>{{contact.name}}</h2>
+                <p *ngIf="contact.dutyString">{{contact.dutyString}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-alpha-cell>
+        </ng-container>
+      </ion-alpha-section>
+    </ng-container>
+  </ion-alpha-list>
+  <div *ngIf="isFilter">
+    <ion-list no-lines="true">
+      <ion-item *ngFor="let item of searchItems" class="search-item" (click)="goDetail(item);">
+        <div item-start>
+          <img class="img" src="{{item.avatar}}" />
+        </div>
+        <ion-label>{{item.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

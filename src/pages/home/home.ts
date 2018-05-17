@@ -36,4 +36,8 @@ export class HomePage {
   goToGrid9() {
     this.navCtrl.push('tabs-feature');
   }
+
+  goContact() {
+    this.navCtrl.push('contact');
+  }
 }

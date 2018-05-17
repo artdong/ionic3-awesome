@@ -1,0 +1,23 @@
+page-contact-detail {
+  ion-content {
+    background-color: #f2f4f7 !important;
+  }
+  .item-md ion-thumbnail {
+    min-width: 50px !important;
+    min-height: 50px !important;
+  }
+  .item-md ion-thumbnail img {
+    width: 55px;
+    height: 55px;
+    border-radius: 6px;
+  }
+  ion-list {
+    box-shadow: none;
+  }
+  .item-bottom-line {
+    border-bottom: 1px solid #F2F4F7 !important;
+  }
+  .item-md ion-icon[item-left] + .item-inner, .item-md ion-icon[item-left] + .item-input, .item-md ion-icon[item-start] + .item-inner, .item-md ion-icon[item-start] + .item-input {
+    margin-left: 8px;
+  }
+}
