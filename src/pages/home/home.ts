@@ -40,4 +40,8 @@ export class HomePage {
   goContact() {
     this.navCtrl.push('contact');
   }
+
+  goSqueak() {
+    this.navCtrl.push('squeak');
+  }
 }

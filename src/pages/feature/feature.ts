@@ -9,8 +9,6 @@ import {IonicPage} from "ionic-angular";
 })
 export class FeaturePage {
   appCollections: any = [];
-  thirdPartyServicesCollections: any = [];
-  defaultImg: String = "assets/img/default-customService.png";
 
   constructor(public navCtrl: NavController) {
     this.appCollections = {

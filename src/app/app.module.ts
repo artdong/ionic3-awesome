@@ -10,6 +10,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {ThemeService} from "../providers/theme/theme.service";
 import {BrowserPopover} from "../pages/browser/browser-popover";
 
+import { Clipboard } from '@ionic-native/clipboard';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -37,6 +39,7 @@ import {BrowserPopover} from "../pages/browser/browser-popover";
     StatusBar,
     SplashScreen,
     ThemeService,
+    Clipboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
