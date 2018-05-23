@@ -1,0 +1,33 @@
+page-video {
+  font-family: '微软雅黑', sans-serif;
+  .cover {
+    z-index: -99;
+    background-color: #222;
+    opacity: 0.3;
+  }
+  video {
+    z-index: -100;
+  }
+  video,
+  .cover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  ion-slides {
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    ion-slide {
+      color: #fff;
+    }
+    h4 {
+      font-weight: bold;
+    }
+  }
+}

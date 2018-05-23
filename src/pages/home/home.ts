@@ -44,4 +44,8 @@ export class HomePage {
   goSqueak() {
     this.navCtrl.push('squeak');
   }
+
+  goVideo() {
+    this.navCtrl.push('video');
+  }
 }
