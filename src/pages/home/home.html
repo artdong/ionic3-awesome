@@ -9,27 +9,27 @@
     <ion-item (click)="changeTheme();">
       <ion-icon name="moon" item-start class="theme-icon" *ngIf="selectedTheme === 'dark-theme'"></ion-icon>
       <ion-icon name="sunny" item-start class="theme-icon" *ngIf="selectedTheme === 'light-theme'"></ion-icon>
-      主题
+      <span class="text">主题</span>
     </ion-item>
     <ion-item (click)="goToQrcode();">
       <ion-icon name="barcode" item-start class="theme-icon"></ion-icon>
-      二维码
+      <span class="text">二维码</span>
     </ion-item>
     <ion-item (click)="goToGrid9();" *ngIf="false">
       <ion-icon name="grid" item-start class="theme-icon"></ion-icon>
-      九宫格
+      <span class="text">九宫格</span>
     </ion-item>
     <ion-item (click)="goContact();">
       <ion-icon name="person" item-start class="theme-icon"></ion-icon>
-      通讯录
+      <span class="text">通讯录</span>
     </ion-item>
     <ion-item (click)="goSqueak();" *ngIf="false">
       <ion-icon name="musical-note" item-start class="theme-icon"></ion-icon>
-      吱口令
+      <span class="text">吱口令</span>
     </ion-item>
     <ion-item (click)="goVideo();">
       <ion-icon name="logo-youtube" item-start class="theme-icon"></ion-icon>
-      video
+      <span class="text">video</span>
     </ion-item>
   </ion-list>
 </ion-content>
