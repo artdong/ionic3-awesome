@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ionicframework.for100101788" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>ionic3-awesome</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -82,5 +82,11 @@
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.19" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
     <plugin name="cordova-clipboard" spec="^1.2.1" />
-    <engine name="android" spec="6.2.3" />
+    <plugin name="cordova-plugin-wechat" spec="^2.1.0">
+        <variable name="WECHATAPPID" value="wx73f0937593299ce1" />
+    </plugin>
+    <plugin name="cordova-plugin-qqsdk" spec="^0.9.7">
+        <variable name="QQ_APP_ID" value="1105494744" />
+    </plugin>
+    <engine name="android" spec="7.0.0" />
 </widget>

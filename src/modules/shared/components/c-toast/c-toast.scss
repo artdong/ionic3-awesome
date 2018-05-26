@@ -1,0 +1,37 @@
+c-toast {
+  .c-toast {
+    position: relative;
+    top: 0px;
+    //top: 50%;
+    width: 100%;
+    height: 56px;
+    color: #fff;
+    background-color: black;
+    border-radius: 15px 15px;
+    z-index: 100;
+    opacity: 0.9;
+    line-height: 56px;
+    text-align: center
+  }
+
+  // 定义样式的时候要小心：hide，show是内置样式！
+  .c-show {
+    animation: c-toast-show .2s ease-in-out forwards;
+  }
+
+  .c-hide {
+    animation: c-toast-show .2s ease-in-out forwards;
+  }
+  @keyframes c-toast-show {
+    //from { top: 50%; }
+    //to { top: calc(50% - 6px) }
+  }
+
+  @keyframes c-toast-hide {
+    //from { top: calc(50% - 6px) }
+    //to { top: 50%; }
+  }
+  // 样式大致的就是触发show方法后：
+  // toast向上滑出，duration时间后，向上滑走。
+  // ng动画也可以实现，但那个更麻烦
+}

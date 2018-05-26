@@ -49,3 +49,39 @@
 //  }
 //}
 
+// 头像选择弹窗
+.headChoice {
+  .action-sheet-group {
+    .action-sheet-title {
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.8rem;
+      color: #000;
+      background: #fefef9;
+    }
+    .disable-hover {
+      min-height: auto;
+      font-size: 1.6rem;
+      color: #000;
+      background: #fff;
+      position: relative;
+      .button-inner {
+        justify-content: flex-start;
+        position: relative;
+        .icon {
+          position: absolute;
+          right: 0px;
+          padding-right: 0;
+        }
+      }
+    }
+    .action-sheet-cancel {
+      background: #fefef9;
+      .button-inner {
+        justify-content: center;
+        font-weight: normal;
+      }
+    }
+  }
+}
+

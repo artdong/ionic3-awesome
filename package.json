@@ -23,15 +23,18 @@
     "@angular/platform-browser-dynamic": "5.2.9",
     "@ionic-native/clipboard": "^4.7.0",
     "@ionic-native/core": "4.6.0",
+    "@ionic-native/qqsdk": "^4.7.0",
     "@ionic-native/splash-screen": "4.6.0",
     "@ionic-native/status-bar": "4.6.0",
     "@ionic/storage": "2.1.3",
-    "cordova-android": "6.2.3",
+    "cordova-android": "7.0.0",
     "cordova-clipboard": "^1.2.1",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.19",
+    "cordova-plugin-qqsdk": "^0.9.7",
     "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-wechat": "^2.1.0",
     "cordova-plugin-whitelist": "^1.3.3",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
@@ -52,7 +55,13 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-clipboard": {}
+      "cordova-clipboard": {},
+      "cordova-plugin-wechat": {
+        "WECHATAPPID": "wx73f0937593299ce1"
+      },
+      "cordova-plugin-qqsdk": {
+        "QQ_APP_ID": "1105494744"
+      }
     },
     "platforms": [
       "android"

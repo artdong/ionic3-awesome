@@ -31,5 +31,29 @@
       <ion-icon name="logo-youtube" item-start class="theme-icon"></ion-icon>
       <span class="text">video</span>
     </ion-item>
+    <ion-item (click)="testToast();">
+      <ion-icon name="ios-alert-outline" item-start class="theme-icon"></ion-icon>
+      <span class="text">testToast</span>
+    </ion-item>
+    <ion-item (click)="presentActionSheet();">
+      <ion-icon name="ios-alert" item-start class="theme-icon"></ion-icon>
+      <span class="text">presentActionSheet</span>
+    </ion-item>
+    <ion-item (click)="shareWxSession();" *ngIf="false">
+      <ion-icon name="at" item-start class="theme-icon"></ion-icon>
+      <span class="text">分享到朋友圈</span>
+    </ion-item>
+    <ion-item (click)="shareWxTimeLine();" *ngIf="false">
+      <ion-icon name="contacts" item-start class="theme-icon"></ion-icon>
+      <span class="text">分享给好友</span>
+    </ion-item>
+    <ion-item (click)="shareQQ();" *ngIf="false">
+      <ion-icon name="at" item-start class="theme-icon"></ion-icon>
+      <span class="text">分享到qq</span>
+    </ion-item>
+    <ion-item (click)="shareQZone();" *ngIf="false">
+      <ion-icon name="contacts" item-start class="theme-icon"></ion-icon>
+      <span class="text">分享到qq空间</span>
+    </ion-item>
   </ion-list>
 </ion-content>

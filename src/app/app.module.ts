@@ -11,6 +11,8 @@ import {ThemeService} from "../providers/theme/theme.service";
 import {BrowserPopover} from "../pages/browser/browser-popover";
 
 import { Clipboard } from '@ionic-native/clipboard';
+import {SharedModule} from "../modules/index";
+import { CToastProvider } from '../providers/c-toast/c-toast';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,16 @@ import { Clipboard } from '@ionic-native/clipboard';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
+      iconMode: 'ios',
+      mode: 'ios',
+      backButtonText: '返回',
       modalEnter: 'modal-slide-in',
       modalLeave: 'modal-slide-out',
       tabsPlacement: 'bottom',
       pageTransition: 'ios-transition',
       tabsHideOnSubPages: 'true' //ionic3隐藏全部子页面tabs
     }),
+    SharedModule
   ],
   exports: [],
   bootstrap: [IonicApp],
@@ -40,7 +46,8 @@ import { Clipboard } from '@ionic-native/clipboard';
     SplashScreen,
     ThemeService,
     Clipboard,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CToastProvider
   ]
 })
 export class AppModule {
