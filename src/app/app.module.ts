@@ -23,9 +23,9 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
-      iconMode: 'ios',
-      mode: 'ios',
-      backButtonText: '返回',
+      // iconMode: 'ios',
+      // mode: 'ios',
+      // backButtonText: '返回',
       modalEnter: 'modal-slide-in',
       modalLeave: 'modal-slide-out',
       tabsPlacement: 'bottom',

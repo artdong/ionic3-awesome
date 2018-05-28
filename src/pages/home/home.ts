@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController, ActionSheetController} from 'ionic-angular';
+import {NavController, ActionSheetController, AlertController, Platform} from 'ionic-angular';
 import {IonicPage} from "ionic-angular";
 import {ThemeService} from "../../providers/providers";
 import {CToastProvider} from "../../providers/providers";
@@ -32,7 +32,8 @@ export class HomePage {
     scene: this.qq.Scene.QQ,
   };
 
-  constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController, private themeService: ThemeService, private cToast: CToastProvider, private qq: QQSDK) {
+  constructor(private platform: Platform,private navCtrl: NavController, private actionSheetCtrl: ActionSheetController,private alertCtrl: AlertController,
+              private themeService: ThemeService, private cToast: CToastProvider, private qq: QQSDK) {
     // 获取当前主题
     this.themeService.getActiveTheme().subscribe(val => this.selectedTheme = val);
     console.log('this.selectedTheme: ' + this.selectedTheme);
@@ -75,9 +76,10 @@ export class HomePage {
   }
 
   presentActionSheet() {
-    let actionSheet = this.actionSheetCtrl.create({
+    let actionSheet = this.actionSheetCtrl
+      .create({
       title: '更换头像',
-      cssClass:'headChoice',
+      cssClass: 'photoChoice-ios',
       buttons: [
         {
           text: '拍照',

@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -50,7 +49,7 @@
 //}
 
 // 头像选择弹窗
-.headChoice {
+.photoChoice-ios {
   .action-sheet-group {
     .action-sheet-title {
       text-align: center;
@@ -85,3 +84,85 @@
   }
 }
 
+.action-sheet-md {
+  text-align: center;
+}
+
+.action-sheet-md .action-sheet-container {
+  padding: 0 10px;
+}
+
+.action-sheet-md .action-sheet-group {
+  overflow: hidden;
+  margin-bottom: 8px;
+  border-radius: 13px;
+  background: #f9f9f9;
+}
+
+.action-sheet-md .action-sheet-group:first-child {
+  padding-top: 0;
+}
+
+.action-sheet-md .action-sheet-group:last-child {
+  margin-bottom: 10px;
+}
+
+.action-sheet-md .action-sheet-title {
+  padding: 1.5rem;
+  border-bottom: 0.55px solid #d6d6da;
+  border-radius: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #8f8f8f;
+}
+
+.action-sheet-md .action-sheet-button {
+  margin: 0;
+  padding: 18px;
+  min-height: 5.6rem;
+  border-bottom: 0.55px solid #d6d6da;
+  font-size: 2rem;
+  color: #007aff;
+  background: transparent;
+}
+
+.action-sheet-md .action-sheet-icon {
+  position: absolute;
+  right: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+.action-sheet-md .action-sheet-button:last-child {
+  border-bottom: 0;
+}
+
+.action-sheet-md .action-sheet-button.activated {
+  margin-top: -0.55px;
+  border-top: 0.55px solid #ebebeb;
+  border-bottom-color: #ebebeb;
+  background: #ebebeb;
+}
+
+.action-sheet-md .action-sheet-selected {
+  font-weight: bold;
+  background: #fff;
+}
+
+.action-sheet-md .action-sheet-destructive {
+  color: #f53d3d;
+}
+
+div.action-sheet-group.action-sheet-group-cancel {
+  background: #fefef9;
+  height: 52.55px;
+}
+
+.action-sheet-md .action-sheet-cancel {
+  background: #fefef9;
+  .button-inner {
+    justify-content: center;
+    font-weight: normal;
+  }
+}
