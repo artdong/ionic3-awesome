@@ -1,17 +1,17 @@
-import {NgModule, ErrorHandler} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
-import {MyApp} from './app.component';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { MyApp } from './app.component';
 
-import {TabsPage} from '../pages/tabs/tabs';
+import { TabsPage } from '../pages/tabs/tabs';
 
-import {StatusBar} from '@ionic-native/status-bar';
-import {SplashScreen} from '@ionic-native/splash-screen';
-import {ThemeService} from "../providers/theme/theme.service";
-import {BrowserPopover} from "../pages/browser/browser-popover";
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { ThemeService } from '../providers/theme/theme.service';
+import { BrowserPopover } from '../pages/browser/browser-popover';
 
 import { Clipboard } from '@ionic-native/clipboard';
-import {SharedModule} from "../modules/index";
+import { SharedModule } from '../modules/index';
 import { CToastProvider } from '../providers/c-toast/c-toast';
 
 @NgModule({

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
 import qrcanvas from 'qrcanvas';
 
 @Component({
@@ -43,7 +43,7 @@ export class QrCodeComponent implements AfterViewInit, OnChanges {
   }
 
   generateQrCode() {
-    let innerHTML = "";
+    let innerHTML = '';
     this.elementRef.nativeElement.querySelector('#qrcode').innerHTML = innerHTML;
     // document.getElementById('qrcode').innerText = '';
     const colorFore = this.foreground;
@@ -81,7 +81,7 @@ export class QrCodeComponent implements AfterViewInit, OnChanges {
       let image = new Image();
       image.src = this.logo;
       this.options.logo = {
-        image: image,
+        image: {image},
         size: 10 / 100
       }
       image.onload = () => {

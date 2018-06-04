@@ -2,7 +2,7 @@
  * Created by admin on 2016/11/22.
  */
 import { Component } from '@angular/core';
-import { ViewController, NavParams } from "ionic-angular";
+import { ViewController, NavParams } from 'ionic-angular';
 
 @Component({
   template: `

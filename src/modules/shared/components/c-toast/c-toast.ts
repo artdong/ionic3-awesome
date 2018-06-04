@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CToastProvider } from "../../../../providers/providers";
+import { CToastProvider } from '../../../../providers/providers';
 /**
  * Generated class for the CToastComponent component.
  *
@@ -31,7 +31,7 @@ export class CToastComponent {
       setTimeout(() => {
         this.hide = false;
         this.active = false;
-      }, 200)  // 隐藏动画完后再移除
+      }, 200);  // 隐藏动画完后再移除
     }, duration);
   }
 }

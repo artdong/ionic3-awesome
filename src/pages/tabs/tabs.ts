@@ -1,5 +1,5 @@
-import {Component, ViewChild} from '@angular/core';
-import {NavParams, Tabs} from "ionic-angular";
+import { Component, ViewChild } from '@angular/core';
+import { NavParams, Tabs } from 'ionic-angular';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -11,12 +11,12 @@ export class TabsPage {
   tab2Root = 'tabs-feature';
   tab3Root = 'tabs-about';
 
-  constructor(private navparams:NavParams,) {
+  constructor(private navparams: NavParams,) {
 
   }
 
   ionViewWillEnter() {
-    if (this.navparams.get("tabindex") == 1)
+    if (this.navparams.get('tabindex') == 1)
       this.tabRef.select(1);
   }
 }

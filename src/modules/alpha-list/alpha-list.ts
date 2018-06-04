@@ -2,7 +2,7 @@ import {
   AfterViewChecked, Component, ContentChildren, ElementRef, Input, QueryList,
   ViewChild
 } from '@angular/core';
-import {AlphaSectionComponent} from './alpha-section';
+import { AlphaSectionComponent } from './alpha-section';
 
 @Component({
   selector: 'ion-alpha-list',
@@ -23,8 +23,7 @@ import {AlphaSectionComponent} from './alpha-section';
       <div class="modal" [class.show]="_showModal">
         {{_currentIndicator}}
       </div>
-    </div>
-  `,
+    </div>`,
   styles: [`
     ::-webkit-scrollbar {
       width: 0
@@ -103,26 +102,26 @@ export class AlphaListComponent implements AfterViewChecked{
 
   _currentIndicator ;
 
-  _flag= true;
-  _indexes: any[]= []; //右侧导航
+  _flag = true;
+  _indexes: any[] = []; // 右侧导航
   _offsetTops: Array<number> = []; // 每个AlphaSection 的offsetTop
   _navOffsetX: 0;
   _indicatorTime: any = null;
   _showModal = false;
 
 
-  @Input() hasTop:boolean = false;
+  @Input() hasTop: boolean = false;
 
   @ViewChild('top') top: ElementRef;
   @ContentChildren(AlphaSectionComponent) _listOfAlphaSection: QueryList<AlphaSectionComponent>;
   @ViewChild('scrollContent') scrollContent: ElementRef;
 
-  constructor(){
+  constructor() {
 
   }
 
   ngAfterViewChecked(): void {
-    if (this._flag && this._listOfAlphaSection){
+    if (this._flag && this._listOfAlphaSection) {
       this._listOfAlphaSection.forEach((section) => {
         this._indexes.push(section.index);
         const offsetTop = section.getElementRef().nativeElement.offsetTop;
@@ -131,7 +130,7 @@ export class AlphaListComponent implements AfterViewChecked{
       });
       this._flag = false;
 
-      if(this.hasTop) {
+      if (this.hasTop) {
         this._indexes.unshift('#');
         this._offsetTops.unshift(0);
 
@@ -139,41 +138,39 @@ export class AlphaListComponent implements AfterViewChecked{
     }
   }
 
-  onScroll(e:any) {
+  onScroll(e: any) {
     e.preventDefault();
     const scrollTopOffsetTop = this.scrollContent.nativeElement.scrollTop;
 
     this._offsetTops.forEach((v, i) => {
-      if (scrollTopOffsetTop >= v){
+      if (scrollTopOffsetTop >= v) {
         this._currentIndicator = this._indexes[i];
-
-        //
         this.setCurrentSection(this._currentIndicator);
       }
 
     });
   }
 
-  touchstart(e:any){
+  touchstart(e: any) {
     this._navOffsetX = e.changedTouches[0].clientX;
     this.scrollList(e.changedTouches[0].clientY);
   }
 
-  touchmove(e:any){
+  touchmove(e: any) {
     e.preventDefault();
     this.scrollList(e.changedTouches[0].clientY);
   }
 
-  touchend(e:any){
+  touchend(e: any) {
     this._indicatorTime = setTimeout(() => {
       this._showModal = false;
       this._currentIndicator = '';
     }, 500);
   }
 
-  scrollList(y:any){
+  scrollList(y: any) {
 
-    const currentItem:any = document.elementFromPoint(this._navOffsetX, y);
+    const currentItem: any = document.elementFromPoint(this._navOffsetX, y);
     if (!currentItem || !currentItem.classList.contains('alpha-bar')) {
       return;
     }
@@ -190,15 +187,15 @@ export class AlphaListComponent implements AfterViewChecked{
   }
 
 
-  setCurrentSection(currentindex:string) {
+  setCurrentSection(currentindex: string) {
     const listArray = this._listOfAlphaSection.toArray();
-    listArray.forEach((section)=>{
-      if(section.index === currentindex ){
+    listArray.forEach((section) => {
+      if (section.index === currentindex) {
         section._current = true;
-      }else{
+      }else {
         section._current = false;
       }
-    })
+    });
   }
 
 }

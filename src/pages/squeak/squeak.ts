@@ -1,8 +1,7 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {IonicPage} from "ionic-angular";
-import {Clipboard} from "@ionic-native/clipboard";
-import {Utils} from "../../common/utils";
+import { Component } from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
+import { Clipboard } from '@ionic-native/clipboard';
+import { Utils } from '../../common/utils';
 
 @IonicPage({name: 'squeak'})
 @Component({

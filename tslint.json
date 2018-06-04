@@ -1,9 +1,16 @@
 {
+  "extends": "tslint-config-alloy",
   "rules": {
-    "no-duplicate-variable": true,
-    "no-unused-variable": [
-      true
-    ]
+    "no-parameter-properties":false, // 无参数属性
+    "no-redundant-jsdoc":false,
+    "triple-equals":false,
+    "no-debugger": false,
+    // 禁止行尾有空格
+    "no-trailing-whitespace": false,
+    "member-ordering":false,
+    "no-this-assignment": [true, {"allowed-names": ["^self$","^that$"], "allow-destructuring": true}],
+    "no-unused-expression": [true, "allow-fast-null-checks", "allow-new"],
+    "comment-format": [true, "check-space"] // 单行注释格式化规则
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"

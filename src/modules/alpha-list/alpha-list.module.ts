@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { AlphaListComponent } from './alpha-list';
-import {AlphaSectionComponent} from './alpha-section';
-import {CommonModule} from '@angular/common';
-import {AlphaCellComponent} from './alpha-cell';
+import { AlphaSectionComponent } from './alpha-section';
+import { CommonModule } from '@angular/common';
+import { AlphaCellComponent } from './alpha-cell';
 
 @NgModule({
   declarations: [

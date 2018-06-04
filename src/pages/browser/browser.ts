@@ -2,9 +2,9 @@
  * Created by DreamBoy on 2016/11/21.
  */
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, PopoverController, Platform, Navbar} from 'ionic-angular';
-import { DomSanitizer } from "@angular/platform-browser";
-import { BrowserPopover } from "./browser-popover";
+import { IonicPage, NavController, NavParams, PopoverController, Platform, Navbar } from 'ionic-angular';
+import { DomSanitizer } from '@angular/platform-browser';
+import { BrowserPopover } from './browser-popover';
 import { TabsPage } from '../../pages/tabs/tabs';
 
 @IonicPage({ name: 'browser' })
@@ -52,15 +52,15 @@ export class BrowserPage {
       this.navCtrl.setRoot(TabsPage, { tabindex: 1 });
       backAction();
     }, 2)
-    let self=this;
-    this.microAppCall = function (e) {//接收iframe中发送过来的数据
-      if (e.data.msgType =="refresh"){
+    let self = this;
+    this.microAppCall ((e) => { // 接收iframe中发送过来的数据
+      if (e.data.msgType == 'refresh') {
         self.reload();
-      } else if (e.data.msgType=="close"){
-        self.navCtrl.push(TabsPage, { tabindex: 1 },{direction: "back"});
+      } else if (e.data.msgType == 'close') {
+        self.navCtrl.push(TabsPage, { tabindex: 1 }, { direction: 'back' });
       }
-      //window.frames[0].postMessage(event.data,'*');
-    }
+      // window.frames[0].postMessage(event.data,'*');
+    });
 
     window.addEventListener('message', this.microAppCall);
   }
@@ -73,11 +73,11 @@ export class BrowserPage {
     this.onprogress();
 
     this.navBar.backButtonClick = (e: UIEvent) => {
-      this.navCtrl.push(TabsPage, { tabindex: 1 } , {direction: "back"});
-    }
+      this.navCtrl.push(TabsPage, { tabindex: 1 } , {direction: 'back'});
+    };
   }
 
-  ionViewDidLeave(){
+  ionViewDidLeave() {
     window.removeEventListener('message', this.microAppCall);
   }
 

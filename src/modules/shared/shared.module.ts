@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
-import {QrCodeComponent, Grid9Component, CToastComponent} from "./components/index";
+import { QrCodeComponent, Grid9Component, CToastComponent } from './components/index';
 
 @NgModule({
   declarations: [

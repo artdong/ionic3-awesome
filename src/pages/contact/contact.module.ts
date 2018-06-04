@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import {IonicPageModule} from 'ionic-angular';
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
 
-import {ContactPage} from './contact';
-import {AlphaListModule} from "../../modules/index";
+import { ContactPage } from './contact';
+import { AlphaListModule } from '../../modules/index';
 
 @NgModule({
   declarations: [

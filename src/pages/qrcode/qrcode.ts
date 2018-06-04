@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {IonicPage} from "ionic-angular";
+import { Component } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
 
 @IonicPage({name: 'page-qrcode'})
 @Component({

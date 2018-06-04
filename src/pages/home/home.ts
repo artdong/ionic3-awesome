@@ -1,8 +1,6 @@
-import {Component} from '@angular/core';
-import {NavController, ActionSheetController, AlertController, Platform} from 'ionic-angular';
-import {IonicPage} from "ionic-angular";
-import {ThemeService} from "../../providers/providers";
-import {CToastProvider} from "../../providers/providers";
+import { Component } from '@angular/core';
+import { IonicPage, NavController, ActionSheetController, AlertController, Platform } from 'ionic-angular';
+import { CToastProvider, ThemeService } from '../../providers/providers';
 import { QQSDK, QQShareOptions } from '@ionic-native/qqsdk';
 
 @IonicPage({name: 'tabs-home'})
@@ -32,7 +30,7 @@ export class HomePage {
     scene: this.qq.Scene.QQ,
   };
 
-  constructor(private platform: Platform,private navCtrl: NavController, private actionSheetCtrl: ActionSheetController,private alertCtrl: AlertController,
+  constructor(private platform: Platform, private navCtrl: NavController, private actionSheetCtrl: ActionSheetController,private alertCtrl: AlertController,
               private themeService: ThemeService, private cToast: CToastProvider, private qq: QQSDK) {
     // 获取当前主题
     this.themeService.getActiveTheme().subscribe(val => this.selectedTheme = val);
@@ -174,7 +172,7 @@ export class HomePage {
     let qq = (<any>window).QQSDK;
     let that = this;
     qq.checkClientInstalled(function () {
-      var args:any = {};
+      let args:any = {};
       args.scene = qq.Scene.QQ;//QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
       args.url = 'https://cordova.apache.org/';
       args.title = "分享到qq";
@@ -194,7 +192,7 @@ export class HomePage {
   shareQZone(){
     let qq = (<any>window).QQSDK;
     qq.checkClientInstalled(function () {
-      var args:any = {};
+      let args:any = {};
       args.scene = qq.Scene.QQZone;//QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
       args.url = 'https://cordova.apache.org/';
       args.title = "分享到qq空间";

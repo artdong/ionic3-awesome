@@ -2,8 +2,8 @@ import {
   AfterViewChecked, Component, ContentChildren, ElementRef, Input,
   QueryList
 } from '@angular/core';
-import {AlphaCellComponent} from './alpha-cell';
-import {AlphaListComponent} from "./alpha-list";
+import { AlphaCellComponent } from './alpha-cell';
+import { AlphaListComponent } from './alpha-list';
 
 @Component({
     selector: 'ion-alpha-section',

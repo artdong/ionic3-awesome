@@ -45,7 +45,10 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.9",
-    "typescript": "~2.6.2"
+    "tslint": "^5.10.0",
+    "tslint-config-alloy": "^0.1.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^2.6.2"
   },
   "description": "An Ionic project",
   "cordova": {

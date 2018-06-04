@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "comment-space": true
+  },
+  "rulesDirectory": "./dist"
+}
+

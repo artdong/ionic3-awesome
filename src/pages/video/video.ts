@@ -25,11 +25,11 @@ export class VideoPage {
   }
 
   playPause() {
-    var myVideo = document.getElementsByTagName('video')[0];
-    if (myVideo.paused){
+    let myVideo = document.getElementsByTagName('video')[0];
+    if (myVideo.paused) {
       myVideo.play();
     }
-    else{
+    else {
       myVideo.pause();
     }
   }
