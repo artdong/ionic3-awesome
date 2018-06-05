@@ -1,15 +1,28 @@
 {
   "extends": "tslint-config-alloy",
   "rules": {
-    "no-parameter-properties":false, // 无参数属性
-    "no-redundant-jsdoc":false,
-    "triple-equals":false,
+    "no-parameter-properties": false, //  禁止给类的构造函数的参数添加修饰符
+    "no-redundant-jsdoc": true,
+    "triple-equals": false,
     "no-debugger": false,
-    // 禁止行尾有空格
+    //  禁止行尾有空格
     "no-trailing-whitespace": false,
-    "member-ordering":false,
-    "no-this-assignment": [true, {"allowed-names": ["^self$","^that$"], "allow-destructuring": true}],
-    "no-unused-expression": [true, "allow-fast-null-checks", "allow-new"],
+    "member-ordering": false,
+    "no-this-assignment": [
+      true,
+      {
+        "allowed-names": [
+          "^self$",
+          "^that$"
+        ],
+        "allow-destructuring": true
+      }
+    ],
+    "no-unused-expression": [
+      true,
+      "allow-fast-null-checks",
+      "allow-new"
+    ],
     // 必须使用箭头函数，除非是单独的函数声明或是命名函数
     "only-arrow-functions": [
       false,
@@ -27,7 +40,11 @@
     "return-undefined": false,
     // 禁止对 array 使用 for in 循环
     "no-for-in-array": false,
-    "comment-format": [true, "check-space"], // 单行注释格式化规则
+    "comment-format": [
+      true,
+      "check-space"
+    ],
+    // 单行注释格式化规则
     "comment-space": true
   },
   "rulesDirectory": [
