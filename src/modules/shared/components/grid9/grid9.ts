@@ -13,8 +13,9 @@ export class Grid9Component {
   }
 
   detail(module) {
-    if (!module.link)
+    if (!module.link) {
       return;
+    }
     if (!module.isThirdParty) {
       this.navCtrl.push(module.link, {item: module});
       return;
@@ -23,7 +24,7 @@ export class Grid9Component {
         title: module.name,
         url: module.link
       };
-      this.navCtrl.push('browser', {browser: browser});
+      this.navCtrl.push('browser', { browser });
     }
   }
 }

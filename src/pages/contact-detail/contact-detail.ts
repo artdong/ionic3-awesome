@@ -9,6 +9,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ContactDetailPage {
   item: any;
   constructor(public navCtrl: NavController, private navParams: NavParams) {
-    this.item = navParams.get('item');
+    this.item = this.navParams.get('item');
   }
 }

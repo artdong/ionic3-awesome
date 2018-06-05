@@ -17,7 +17,7 @@ export class ContactPage implements AfterViewInit {
   searchItems: any;
   isFilter = false;
 
-  constructor(public navCtrl: NavController,) {
+  constructor(public navCtrl: NavController) {
     this.data = [{
       'id': 'A',
       'items': [{
@@ -137,7 +137,7 @@ export class ContactPage implements AfterViewInit {
         return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1 ||
           item.fl.toLowerCase().indexOf(val.toLowerCase()) > -1
         );
-      })
+      });
     }
   }
 
@@ -150,11 +150,11 @@ export class ContactPage implements AfterViewInit {
       idx.items.forEach((item) => {
         this.items.push(item);
       });
-    })
+    });
     this.allItems = this.items.concat();
   }
 
   goDetail(contact) {
-    this.navCtrl.push('contact-detail', {'item': contact})
+    this.navCtrl.push('contact-detail', {'item': contact});
   }
 }

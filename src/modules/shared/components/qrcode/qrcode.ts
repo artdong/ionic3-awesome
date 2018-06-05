@@ -83,7 +83,7 @@ export class QrCodeComponent implements AfterViewInit, OnChanges {
       this.options.logo = {
         image: {image},
         size: 10 / 100
-      }
+      };
       image.onload = () => {
         const canvas = qrcanvas(this.options);
         // document.getElementById('qrcode').appendChild(canvas);

@@ -30,7 +30,7 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
       modalLeave: 'modal-slide-out',
       tabsPlacement: 'bottom',
       pageTransition: 'ios-transition',
-      tabsHideOnSubPages: 'true' //ionic3隐藏全部子页面tabs
+      tabsHideOnSubPages: 'true' // ionic3隐藏全部子页面tabs
     }),
     SharedModule
   ],

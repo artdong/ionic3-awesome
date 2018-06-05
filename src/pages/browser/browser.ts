@@ -48,10 +48,10 @@ export class BrowserPage {
       this.browser.secUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.browser.url);
     }
     this.reload();
-    let backAction = platform.registerBackButtonAction(() => {
+    let backAction = this.platform.registerBackButtonAction(() => {
       this.navCtrl.setRoot(TabsPage, { tabindex: 1 });
       backAction();
-    }, 2)
+    }, 2);
     let self = this;
     this.microAppCall ((e) => { // 接收iframe中发送过来的数据
       if (e.data.msgType == 'refresh') {

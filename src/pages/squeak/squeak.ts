@@ -31,7 +31,7 @@ export class SqueakPage {
               title: '百度',
               url: resolve
             };
-            this.navCtrl.push('browser', {browser: browser});
+            this.navCtrl.push('browser', {browser});
           } else {
             alert(resolve);
           }

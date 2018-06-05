@@ -11,12 +11,13 @@ export class TabsPage {
   tab2Root = 'tabs-feature';
   tab3Root = 'tabs-about';
 
-  constructor(private navparams: NavParams,) {
+  constructor(private navparams: NavParams) {
 
   }
 
   ionViewWillEnter() {
-    if (this.navparams.get('tabindex') == 1)
+    if (this.navparams.get('tabindex') == 1) {
       this.tabRef.select(1);
+    }
   }
 }

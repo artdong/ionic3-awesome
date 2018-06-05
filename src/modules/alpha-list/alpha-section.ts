@@ -3,7 +3,6 @@ import {
   QueryList
 } from '@angular/core';
 import { AlphaCellComponent } from './alpha-cell';
-import { AlphaListComponent } from './alpha-list';
 
 @Component({
     selector: 'ion-alpha-section',
@@ -47,7 +46,7 @@ import { AlphaListComponent } from './alpha-list';
 })
 export class AlphaSectionComponent implements AfterViewChecked {
 
-  _current=false;
+  _current = false;
 
   @Input() index: string;
 
@@ -55,7 +54,7 @@ export class AlphaSectionComponent implements AfterViewChecked {
 
   constructor(public elementRef: ElementRef) { }
 
-  getElementRef():ElementRef{
+  getElementRef(): ElementRef {
     return this.elementRef;
   }
 

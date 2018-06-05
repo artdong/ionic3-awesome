@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ActionSheetController, AlertController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, ActionSheetController } from 'ionic-angular';
 import { CToastProvider, ThemeService } from '../../providers/providers';
 import { QQSDK, QQShareOptions } from '@ionic-native/qqsdk';
 
@@ -30,7 +30,7 @@ export class HomePage {
     scene: this.qq.Scene.QQ,
   };
 
-  constructor(private platform: Platform, private navCtrl: NavController, private actionSheetCtrl: ActionSheetController,private alertCtrl: AlertController,
+  constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController
               private themeService: ThemeService, private cToast: CToastProvider, private qq: QQSDK) {
     // 获取当前主题
     this.themeService.getActiveTheme().subscribe(val => this.selectedTheme = val);
@@ -86,13 +86,13 @@ export class HomePage {
           handler: () => {
             console.log('Destructive clicked');
           }
-        },{
+        }, {
           text: '从相册选择',
           icon: 'ios-arrow-forward',
           handler: () => {
             console.log('Archive clicked');
           }
-        },{
+        }, {
           text: '取消',
           role: 'cancel',
           handler: () => {
@@ -104,15 +104,15 @@ export class HomePage {
     actionSheet.present();
   }
 
-  shareWxSession(){
-    let wechat = (<any>window).Wechat;
+  shareWxSession() {
+    let wechat = (window as any).Wechat;
     wechat.isInstalled(function (installed) {
-      if(!installed){
+      if (!installed) {
         alert('您没有安装微信！');
         return ;
       }
     }, function (reason) {
-      alert("Failed: " + reason);
+      alert('Failed: ' + reason);
     });
     wechat.share({
       message: {
@@ -128,19 +128,19 @@ export class HomePage {
     }, function () {
       alert('分享成功');
     }, function (reason) {
-      alert("Failed: " + reason);
+      alert('Failed: ' + reason);
     });
   }
 
-  shareWxTimeLine(){
-    let wechat = (<any>window).Wechat;
+  shareWxTimeLine() {
+    let wechat = (window as any).Wechat;
     wechat.isInstalled(function (installed) {
-      if(!installed){
+      if (!installed) {
         alert('您没有安装微信！');
         return ;
       }
     }, function (reason) {
-      alert("Failed: " + reason);
+      alert('Failed: ' + reason);
     });
     wechat.share({
       message: {
@@ -156,11 +156,11 @@ export class HomePage {
     }, function () {
       alert('分享成功');
     }, function (reason) {
-      alert("Failed: " + reason);
+      alert('Failed: ' + reason);
     });
   }
 
-  shareQQ(){
+  shareQQ() {
     // this.qq.shareText(this.shareTextOptions)
     //   .then(() => {
     //     alert('shareText success');
@@ -169,40 +169,39 @@ export class HomePage {
     //     alert(error);
     //   });
 
-    let qq = (<any>window).QQSDK;
-    let that = this;
+    let qq = (window as any).QQSDK;
     qq.checkClientInstalled(function () {
-      let args:any = {};
-      args.scene = qq.Scene.QQ;//QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
+      let args: any = {};
+      args.scene = qq.Scene.QQ; // QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
       args.url = 'https://cordova.apache.org/';
-      args.title = "分享到qq";
-      args.description = "分享到qq";
+      args.title = '分享到qq';
+      args.description = '分享到qq';
       args.image = 'https://cordova.apache.org/static/img/cordova_bot.png';
       qq.shareNews(function () {
         alert('分享成功');
       }, function (failReason) {
         alert(failReason);
-      },args);
+      }, args);
     }, function () {
       // if installed QQ Client version is not supported sso,also will get this error
       alert('您没有安装QQ！');
     });
   }
 
-  shareQZone(){
-    let qq = (<any>window).QQSDK;
+  shareQZone() {
+    let qq = (window as any).QQSDK;
     qq.checkClientInstalled(function () {
-      let args:any = {};
-      args.scene = qq.Scene.QQZone;//QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
+      let args: any = {};
+      args.scene = qq.Scene.QQZone; // QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
       args.url = 'https://cordova.apache.org/';
-      args.title = "分享到qq空间";
-      args.description = "分享到qq空间";
+      args.title = '分享到qq空间';
+      args.description = '分享到qq空间';
       args.image = 'https://cordova.apache.org/static/img/cordova_bot.png';
       qq.shareNews(function () {
         alert('分享成功');
       }, function (failReason) {
         alert(failReason);
-      },args);
+      }, args);
     }, function () {
       // if installed QQ Client version is not supported sso,also will get this error
       alert('您没有安装QQ！');
