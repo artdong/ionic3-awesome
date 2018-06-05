@@ -30,8 +30,7 @@ export class HomePage {
     scene: this.qq.Scene.QQ,
   };
 
-  constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController
-              private themeService: ThemeService, private cToast: CToastProvider, private qq: QQSDK) {
+  constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController, private themeService: ThemeService, private cToast: CToastProvider, private qq: QQSDK) {
     // 获取当前主题
     this.themeService.getActiveTheme().subscribe(val => this.selectedTheme = val);
     console.log('this.selectedTheme: ' + this.selectedTheme);
