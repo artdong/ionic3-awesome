@@ -81,7 +81,7 @@ export class QrCodeComponent implements AfterViewInit, OnChanges {
       let image = new Image();
       image.src = this.logo;
       this.options.logo = {
-        image: {image},
+        image: image,
         size: 10 / 100
       };
       image.onload = () => {

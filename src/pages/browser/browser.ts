@@ -53,14 +53,13 @@ export class BrowserPage {
       backAction();
     }, 2);
     let self = this;
-    this.microAppCall ((e) => { // 接收iframe中发送过来的数据
+    this.microAppCall = function (e) { // 接收iframe中发送过来的数据
       if (e.data.msgType == 'refresh') {
         self.reload();
       } else if (e.data.msgType == 'close') {
         self.navCtrl.push(TabsPage, { tabindex: 1 }, { direction: 'back' });
       }
-      // window.frames[0].postMessage(event.data,'*');
-    });
+    };
 
     window.addEventListener('message', this.microAppCall);
   }

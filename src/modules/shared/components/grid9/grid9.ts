@@ -13,6 +13,7 @@ export class Grid9Component {
   }
 
   detail(module) {
+    console.log('module: ' + JSON.stringify(module));
     if (!module.link) {
       return;
     }
