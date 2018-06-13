@@ -206,4 +206,8 @@ export class HomePage {
       alert('您没有安装QQ！');
     });
   }
+
+  getWeather() {
+    this.navCtrl.push('WeatherPage');
+  }
 }

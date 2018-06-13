@@ -7,8 +7,8 @@
 <ion-content>
   <ion-list no-lines="true">
     <ion-item (click)="changeTheme();">
-      <ion-icon name="moon" item-start class="theme-icon" *ngIf="selectedTheme === 'dark-theme'"></ion-icon>
-      <ion-icon name="sunny" item-start class="theme-icon" *ngIf="selectedTheme === 'light-theme'"></ion-icon>
+      <ion-icon name="moon" item-start class="theme-icon" *ngIf="[selectedTheme] == 'dark-theme'"></ion-icon>
+      <ion-icon name="sunny" item-start class="theme-icon" *ngIf="[selectedTheme] == 'light-theme'"></ion-icon>
       <span class="text">主题</span>
     </ion-item>
     <ion-item (click)="goToQrcode();">
@@ -54,6 +54,10 @@
     <ion-item (click)="shareQZone();" *ngIf="false">
       <ion-icon name="contacts" item-start class="theme-icon"></ion-icon>
       <span class="text">分享到qq空间</span>
+    </ion-item>
+    <ion-item (click)="getWeather();">
+      <ion-icon name="weather" item-start class="theme-icon"></ion-icon>
+      <span class="text">获取天气信息</span>
     </ion-item>
   </ion-list>
 </ion-content>

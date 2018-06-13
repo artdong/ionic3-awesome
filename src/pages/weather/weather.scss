@@ -1,0 +1,24 @@
+page-weather {
+  .home {
+    background: #6495ed;
+    color: #f4f4f4;
+    margin-top: 30px;
+  }
+  .location {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .icon {
+    text-align: center;
+  }
+  .icon img {
+    width: 100px;
+    height: 100px;
+  }
+  .temp {
+    font-size: 90px;
+    text-align: center;
+    font-weight: normal;
+  }
+}

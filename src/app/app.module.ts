@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -13,6 +14,8 @@ import { BrowserPopover } from '../pages/browser/browser-popover';
 import { Clipboard } from '@ionic-native/clipboard';
 import { SharedModule } from '../modules/index';
 import { CToastProvider } from '../providers/c-toast/c-toast';
+import { WeatherProvider } from '../providers/weather/weather';
+import { IonicStorageModule } from '@ionic/storage'
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
       pageTransition: 'ios-transition',
       tabsHideOnSubPages: 'true' // ionic3隐藏全部子页面tabs
     }),
-    SharedModule
+    IonicStorageModule.forRoot(),
+    SharedModule,
+    HttpClientModule
   ],
   exports: [],
   bootstrap: [IonicApp],
@@ -47,7 +52,8 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
     ThemeService,
     Clipboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CToastProvider
+    CToastProvider,
+    WeatherProvider
   ]
 })
 export class AppModule {
