@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { TabsPage } from '../pages/tabs/tabs';
+import { TabsModule } from '../pages/tabs/tabs.module';
+import { HomeModule } from '../pages/home/home.module';
+import { FeatureModule } from '../pages/feature/feature.module';
+import { AboutModule } from '../pages/about/about.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +20,6 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage,
     BrowserPopover
   ],
   imports: [
@@ -32,13 +34,16 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
       pageTransition: 'ios-transition',
       tabsHideOnSubPages: 'true' // ionic3隐藏全部子页面tabs
     }),
+    TabsModule,
+    HomeModule,
+    FeatureModule,
+    AboutModule,
     SharedModule
   ],
   exports: [],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TabsPage,
     BrowserPopover
   ],
   providers: [

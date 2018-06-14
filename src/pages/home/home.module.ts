@@ -10,8 +10,14 @@ import { QQSDK } from '@ionic-native/qqsdk';
   imports: [
     IonicPageModule.forChild(HomePage),
   ],
+  entryComponents: [
+    HomePage
+  ],
   providers: [
     QQSDK
+  ],
+  exports: [
+    HomePage
   ]
 })
 export class HomeModule {}
