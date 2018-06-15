@@ -12,8 +12,12 @@ import { SharedModule } from '../../modules/index';
     SharedModule
   ],
   entryComponents: [
+    AboutPage
   ],
   providers: [
+  ],
+  exports: [
+    AboutPage
   ]
 })
 export class AboutModule {}

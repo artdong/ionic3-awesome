@@ -4,7 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { TabsPage } from '../pages/tabs/tabs';
+import { TabsModule } from '../pages/tabs/tabs.module';
+import { HomeModule } from '../pages/home/home.module';
+import { FeatureModule } from '../pages/feature/feature.module';
+import { AboutModule } from '../pages/about/about.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +24,6 @@ import { MultiPickerModule } from 'ion-multi-picker';
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage,
     BrowserPopover
   ],
   imports: [
@@ -39,13 +41,16 @@ import { MultiPickerModule } from 'ion-multi-picker';
     }),
     IonicStorageModule.forRoot(),
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    TabsModule,
+    HomeModule,
+    FeatureModule,
+    AboutModule
   ],
   exports: [],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TabsPage,
     BrowserPopover
   ],
   providers: [

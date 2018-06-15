@@ -11,7 +11,13 @@ import { SharedModule } from '../../modules/index';
     IonicPageModule.forChild(FeaturePage),
     SharedModule
   ],
+  entryComponents: [
+    FeaturePage
+  ],
   providers: [
+  ],
+  exports: [
+    FeaturePage
   ]
 })
 export class FeatureModule {}
