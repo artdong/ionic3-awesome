@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -16,6 +17,9 @@ import { BrowserPopover } from '../pages/browser/browser-popover';
 import { Clipboard } from '@ionic-native/clipboard';
 import { SharedModule } from '../modules/index';
 import { CToastProvider } from '../providers/c-toast/c-toast';
+import { WeatherProvider } from '../providers/weather/weather';
+import { IonicStorageModule } from '@ionic/storage'
+import { MultiPickerModule } from 'ion-multi-picker';
 
 @NgModule({
   declarations: [
@@ -32,13 +36,16 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
       modalLeave: 'modal-slide-out',
       tabsPlacement: 'bottom',
       pageTransition: 'ios-transition',
+      MultiPickerModule,
       tabsHideOnSubPages: 'true' // ionic3隐藏全部子页面tabs
     }),
+    IonicStorageModule.forRoot(),
+    SharedModule,
+    HttpClientModule,
     TabsModule,
     HomeModule,
     FeatureModule,
-    AboutModule,
-    SharedModule
+    AboutModule
   ],
   exports: [],
   bootstrap: [IonicApp],
@@ -51,8 +58,9 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
     SplashScreen,
     ThemeService,
     Clipboard,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CToastProvider
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    CToastProvider,
+    WeatherProvider
   ]
 })
 export class AppModule {
