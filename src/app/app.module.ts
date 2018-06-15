@@ -16,6 +16,7 @@ import { SharedModule } from '../modules/index';
 import { CToastProvider } from '../providers/c-toast/c-toast';
 import { WeatherProvider } from '../providers/weather/weather';
 import { IonicStorageModule } from '@ionic/storage'
+import { MultiPickerModule } from 'ion-multi-picker';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { IonicStorageModule } from '@ionic/storage'
       modalLeave: 'modal-slide-out',
       tabsPlacement: 'bottom',
       pageTransition: 'ios-transition',
+      MultiPickerModule,
       tabsHideOnSubPages: 'true' // ionic3隐藏全部子页面tabs
     }),
     IonicStorageModule.forRoot(),
@@ -51,7 +53,7 @@ import { IonicStorageModule } from '@ionic/storage'
     SplashScreen,
     ThemeService,
     Clipboard,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     CToastProvider,
     WeatherProvider
   ]

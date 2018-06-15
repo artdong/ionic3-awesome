@@ -17,7 +17,7 @@
   <ion-grid *ngIf="weather">
     <ion-row>
       <ion-col>
-        <div class="location">{{weather.city}}</div>
+        <div class="location" (click)="changeCity();">{{weather.city}}</div>
       </ion-col>
       <ion-col>
         <div class="icon">

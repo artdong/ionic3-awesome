@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ChangecityPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>changecity</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <form (ngSubmit)="saveForm()">
+          <ion-item>
+            <ion-label fixed>
+              城市
+            </ion-label>
+            <ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
+          </ion-item>
+          <button ion-button type="submit" class="ion">保存</button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="pin" item-start></ion-icon>
+      <ion-label>城市</ion-label>
+      <ion-multi-picker id="cities" item-content [multiPickerColumns]="cityColumns" [separator]="'-'" [cancelText]="'取消'" [doneText]="'完成'"></ion-multi-picker>
+    </ion-item>
+    <button ion-button class="ion" (click)="saveCitySelect();">保存</button>
+  </ion-list>
+</ion-content>

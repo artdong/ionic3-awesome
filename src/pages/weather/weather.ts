@@ -1,7 +1,7 @@
 import { WeatherProvider } from './../../providers/weather/weather';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage'
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the WeatherPage page.
@@ -46,5 +46,18 @@ export class WeatherPage {
         this.weatherImg = 'http://www.moji.com//templets/mojichina/images/weather/weather/w' + this.weather.img + ".png";
       });
     });
+  }
+  changeCity() {
+    let cityBkData = msg => {
+      return new Promise((resolve, reject) => {
+        if (msg != undefined) {
+          resolve(true);
+        }
+        else {
+          reject(Error('error'));
+        }
+      });
+    }
+    this.navCtrl.push('ChangecityPage', { 'cityBkData': cityBkData });
   }
 }
