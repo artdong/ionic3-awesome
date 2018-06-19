@@ -20,6 +20,7 @@ import { CToastProvider } from '../providers/c-toast/c-toast';
 import { WeatherProvider } from '../providers/weather/weather';
 import { IonicStorageModule } from '@ionic/storage'
 import { MultiPickerModule } from 'ion-multi-picker';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { MultiPickerModule } from 'ion-multi-picker';
     Clipboard,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CToastProvider,
+    FingerprintAIO,
     WeatherProvider
   ]
 })

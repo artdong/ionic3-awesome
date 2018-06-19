@@ -1,0 +1,32 @@
+<!--
+  Generated template for the FingerprintPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>登录</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+      <ion-label fixed>账号</ion-label>
+      <ion-input type="text" placeholder="请输入账号" #username></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>密码</ion-label>
+      <ion-input type="password" placeholder="请输入密码" #password></ion-input>
+    </ion-item>
+  <ion-item no-lines>
+    <label item-right>指纹登陆</label>
+    <ion-toggle [(ngModel)]="isToggled" (ionChange)="nofity()"></ion-toggle>
+  </ion-item>
+
+  <div style="text-align: center; margin-left: 30px; margin-right: 30px;">
+    <button ion-button block (click)="logIn(username, password)">
+      登录
+    </button>
+  </div>
+</ion-content>

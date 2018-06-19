@@ -82,11 +82,9 @@
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.19" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
     <plugin name="cordova-clipboard" spec="^1.2.1" />
-    <plugin name="cordova-plugin-wechat" spec="^2.1.0">
-        <variable name="WECHATAPPID" value="wx73f0937593299ce1" />
-    </plugin>
     <plugin name="cordova-plugin-qqsdk" spec="^0.9.7">
         <variable name="QQ_APP_ID" value="1105494744" />
     </plugin>
+    <plugin name="cordova-plugin-fingerprint-aio" spec="^1.3.7" />
     <engine name="android" spec="7.0.0" />
 </widget>
