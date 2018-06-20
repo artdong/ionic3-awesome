@@ -210,4 +210,7 @@ export class HomePage {
   getWeather() {
     this.navCtrl.push('WeatherPage');
   }
+  getfingerprint() {
+    this.navCtrl.push('FingerprintPage');
+  }
 }
