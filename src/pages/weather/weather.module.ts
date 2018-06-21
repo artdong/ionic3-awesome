@@ -10,4 +10,5 @@ import { WeatherPage } from './weather';
     IonicPageModule.forChild(WeatherPage)
   ],
 })
-export class WeatherPageModule {}
+export class WeatherPageModule {
+}

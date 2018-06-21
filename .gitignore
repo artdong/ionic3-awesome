@@ -12,7 +12,7 @@ log.txt
 .vscode/
 npm-debug.log*
 yarn.lock
-
+package-lock.json
 .idea/
 .sourcemaps/
 .sass-cache/
