@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Storage } from '@ionic/storage'
+import { Storage } from '@ionic/storage';
 import { WeatherProvider } from '../../providers/weather/weather';
 
 /**
@@ -19,7 +19,6 @@ export class ChangecityPage {
   city: string;
   cityBkData: any;
   cityColumns: any[];
-  cityText: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public weatherProvider: WeatherProvider) {
     this.storage.get('location').then(val => {
@@ -31,13 +30,14 @@ export class ChangecityPage {
         this.city = '唐山';
       }
     });
-    this.cityBkData = this.navParams.get("cityBkData");
+    this.cityBkData = this.navParams.get('cityBkData');
     this.cityColumns = weatherProvider.citys;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChangecityPage');
   }
+
   saveForm() {
     let location = {
       city: this.city
@@ -52,13 +52,14 @@ export class ChangecityPage {
     );
     this.storage.set('location', JSON.stringify(location));
   }
+
   saveCitySelect() {
     let location = {
       city: this.city
     };
     let isSave = false;
 
-    let cityArr = document.getElementById("cities").innerText;
+    let cityArr = document.getElementById('cities').innerText;
     if (cityArr) {
       let cityTmp = cityArr.split('-');
       if (cityTmp[2] && cityTmp[2] != '市辖区') {

@@ -17,7 +17,7 @@ export class HomePage {
     url: 'https://cordova.apache.org/',
     image: 'https://cordova.apache.org/static/img/cordova_bot.png',
     description: 'This is  Cordova QQ share description',
-    flashUrl:  'http://stream20.qqmusic.qq.com/30577158.mp3',
+    flashUrl: 'http://stream20.qqmusic.qq.com/30577158.mp3',
   };
 
   clientOptions: QQShareOptions = {
@@ -75,31 +75,31 @@ export class HomePage {
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl
       .create({
-      title: '更换头像',
-      cssClass: 'photoChoice-ios',
-      buttons: [
-        {
-          text: '拍照',
-          icon: 'ios-arrow-forward',
-          role: 'destructive',
-          handler: () => {
-            console.log('Destructive clicked');
+        title: '更换头像',
+        cssClass: 'photoChoice-ios',
+        buttons: [
+          {
+            text: '拍照',
+            icon: 'ios-arrow-forward',
+            role: 'destructive',
+            handler: () => {
+              console.log('Destructive clicked');
+            }
+          }, {
+            text: '从相册选择',
+            icon: 'ios-arrow-forward',
+            handler: () => {
+              console.log('Archive clicked');
+            }
+          }, {
+            text: '取消',
+            role: 'cancel',
+            handler: () => {
+              console.log('Cancel clicked');
+            }
           }
-        }, {
-          text: '从相册选择',
-          icon: 'ios-arrow-forward',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        }, {
-          text: '取消',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
+        ]
+      });
     actionSheet.present();
   }
 
@@ -108,7 +108,7 @@ export class HomePage {
     wechat.isInstalled(function (installed) {
       if (!installed) {
         alert('您没有安装微信！');
-        return ;
+        return;
       }
     }, function (reason) {
       alert('Failed: ' + reason);
@@ -136,7 +136,7 @@ export class HomePage {
     wechat.isInstalled(function (installed) {
       if (!installed) {
         alert('您没有安装微信！');
-        return ;
+        return;
       }
     }, function (reason) {
       alert('Failed: ' + reason);
@@ -207,10 +207,11 @@ export class HomePage {
     });
   }
 
-  getWeather() {
+  weather() {
     this.navCtrl.push('WeatherPage');
   }
-  getfingerprint() {
+
+  fingerprint() {
     this.navCtrl.push('FingerprintPage');
   }
 }

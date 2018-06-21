@@ -29,6 +29,7 @@ export class WeatherPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad WeatherPage');
   }
+
   ionViewWillEnter() {
     // 每次进入重新获取
     this.storage.get('location').then(val => {
@@ -43,10 +44,11 @@ export class WeatherPage {
       this.weatherProvider.getWeather(this.location.city).subscribe(result => {
         this.weatherResult = result;
         this.weather = this.weatherResult.result;
-        this.weatherImg = 'http://www.moji.com//templets/mojichina/images/weather/weather/w' + this.weather.img + ".png";
+        this.weatherImg = 'http://www.moji.com//templets/mojichina/images/weather/weather/w' + this.weather.img + '.png';
       });
     });
   }
+
   changeCity() {
     let cityBkData = msg => {
       return new Promise((resolve, reject) => {
@@ -57,7 +59,7 @@ export class WeatherPage {
           reject(Error('error'));
         }
       });
-    }
-    this.navCtrl.push('ChangecityPage', { 'cityBkData': cityBkData });
+    };
+    this.navCtrl.push('ChangecityPage', {'cityBkData': cityBkData});
   }
 }

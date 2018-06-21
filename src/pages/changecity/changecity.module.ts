@@ -12,4 +12,5 @@ import { MultiPickerModule } from 'ion-multi-picker';
     MultiPickerModule
   ],
 })
-export class ChangecityPageModule { }
+export class ChangecityPageModule {
+}

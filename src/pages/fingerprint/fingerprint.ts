@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
 
 /**
@@ -19,6 +19,7 @@ export class FingerprintPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FingerprintPage');
   }
+
   isToggled: Boolean = false;
 
   constructor(public navCtrl: NavController, private faio: FingerprintAIO, public alertCtrl: AlertController) {
@@ -28,10 +29,10 @@ export class FingerprintPage {
     this.faio.isAvailable().then(result => {
       this.faio.show({
         clientId: 'Fingerprint-awesome',
-        clientSecret: 'password', //Only necessary for Android
-        disableBackup: true,  //Only for Android(optional)
-        localizedFallbackTitle: '指纹认证', //Only for iOS
-        localizedReason: '输入指纹' //Only for iOS
+        clientSecret: 'password', // Only necessary for Android
+        disableBackup: true,  // Only for Android(optional)
+        localizedFallbackTitle: '指纹认证', // Only for iOS
+        localizedReason: '输入指纹' // Only for iOS
       }).then((result: any) => {
         this.navCtrl.pop();
       }).catch((error: any) => {
@@ -54,11 +55,13 @@ export class FingerprintPage {
     });
 
   }
+
   nofity() {
     if (this.isToggled) {
       this.show();
     }
   }
+
   logIn(username: any, password: any) {
     this.navCtrl.pop();
   }
