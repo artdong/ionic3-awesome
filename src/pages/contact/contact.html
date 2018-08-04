@@ -33,7 +33,7 @@
         <div item-start>
           <img class="img" src="{{item.avatar}}" />
         </div>
-        <ion-label>{{item.name}}</ion-label>
+        <ion-label [innerHTML]="item.name | keyword:searchText"></ion-label>
       </ion-item>
     </ion-list>
   </div>
