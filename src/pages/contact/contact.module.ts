@@ -3,6 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 
 import { ContactPage } from './contact';
 import { AlphaListModule } from '../../modules/index';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { AlphaListModule } from '../../modules/index';
   ],
   imports: [
     IonicPageModule.forChild(ContactPage),
+    PipesModule,
     AlphaListModule
   ],
   exports: [
