@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, ActionSheetController, Modal, ModalController } from 'ionic-angular';
 import { CToastProvider, ThemeService } from '../../providers/providers';
 import { QQSDK, QQShareOptions } from '@ionic-native/qqsdk';
+import { CModalComponent } from '../../modules/shared/components/index';
 
 @IonicPage({name: 'tabs-home'})
 @Component({
@@ -30,7 +31,15 @@ export class HomePage {
     scene: this.qq.Scene.QQ,
   };
 
-  constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController, private themeService: ThemeService, private cToast: CToastProvider, private qq: QQSDK) {
+  mds: Modal;
+  showModal = false;
+
+  constructor(private navCtrl: NavController,
+              private actionSheetCtrl: ActionSheetController,
+              private themeService: ThemeService,
+              private cToast: CToastProvider,
+              private qq: QQSDK,
+              private modalController: ModalController) {
     // 获取当前主题
     this.themeService.getActiveTheme().subscribe(val => this.selectedTheme = val);
     console.log('this.selectedTheme: ' + this.selectedTheme);
@@ -213,5 +222,37 @@ export class HomePage {
 
   fingerprint() {
     this.navCtrl.push('FingerprintPage');
+  }
+
+  openModal() {
+    this.mds = this.modalController.create(CModalComponent, {
+      navigationDockId: 1
+    }, {
+      showBackdrop: true,
+      enableBackdropDismiss: true,
+      // cssClass: 'custom-modal',
+      enterAnimation: 'modal-from-bottom-enter',
+      leaveAnimation: 'modal-from-bottom-leave'
+    });
+    this.mds.onDidDismiss(data => {
+      this.showModal = false;
+    });
+    this.mds.present().then(data => {
+      this.showModal = true;
+    });
+  }
+
+  closeModel() {
+    if (this.mds && this.showModal) {
+      this.mds.dismiss();
+    }
+  }
+
+  openModalMenu() {
+    if (this.mds && this.showModal) {
+      this.mds.dismiss();
+    } else {
+      this.openModal();
+    }
   }
 }

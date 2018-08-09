@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content tappable (click)="closeModel()">
   <ion-list no-lines="true">
     <ion-item (click)="changeTheme();">
       <ion-icon name="moon" item-start class="theme-icon" *ngIf="[selectedTheme] == 'dark-theme'"></ion-icon>
@@ -62,6 +62,10 @@
     <ion-item (click)="fingerprint();">
       <ion-icon name="finger-print" item-start class="theme-icon"></ion-icon>
       <span class="text">指纹认证</span>
+    </ion-item>
+    <ion-item (click)="openModalMenu();">
+      <ion-icon name="finger-print" item-start class="theme-icon"></ion-icon>
+      <span class="text">modal</span>
     </ion-item>
   </ion-list>
 </ion-content>

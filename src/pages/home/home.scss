@@ -2,6 +2,11 @@ page-home {
   //.text {
   //  font-size: 1rem;
   //}
+  .title,
+  .title-md{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
   ion-item {
     margin-left: 8px !important;
     color: #797979 !important;
@@ -9,5 +14,18 @@ page-home {
   }
   ion-item:first-child {
     border-top: none !important;
+  }
+  ion-content div.scroll-content {
+    background-color: transparent;
+  }
+}
+.custom-modal {
+  position: absolute;
+  top: calc(100% - 200px);
+  width: 100%;
+  height: 500px;
+  .scroll-content {
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
