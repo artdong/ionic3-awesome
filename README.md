@@ -38,6 +38,11 @@ ionic cordova run build android (安卓打包发布)
 
 ionic cordova run build ios (安卓打包发布)
 ```
+
+### 在线演示
+
+[点我演示 :smiley:](https://alex-0407.github.io/blog/2018/06/01/ionic3-awesome)
+
 ### 效果预览
 
 ![动态图](https://github.com/alex-0407/ionic3-awesome/blob/develop/src/assets/screen/ionic3-awesome-v0.14.gif?raw=true)
