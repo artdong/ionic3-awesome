@@ -2,13 +2,16 @@ import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
 import { QrCodeComponent, Grid9Component, CToastComponent, CModalComponent } from './components/index';
+import {CModalRightComponent} from "./components/c-modal-right/c-modal-right";
 
 @NgModule({
   declarations: [
     QrCodeComponent,
     Grid9Component,
     CToastComponent,
-    CModalComponent
+    CModalComponent,
+    CModalRightComponent
+
   ],
   imports: [
     IonicModule,
@@ -22,7 +25,8 @@ import { QrCodeComponent, Grid9Component, CToastComponent, CModalComponent } fro
   ],
   entryComponents: [
     CToastComponent,
-    CModalComponent
+    CModalComponent,
+    CModalRightComponent
   ],
   providers: [
   ]
