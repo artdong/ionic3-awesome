@@ -59,13 +59,17 @@
       <ion-icon name="rainy" item-start class="theme-icon"></ion-icon>
       <span class="text">获取天气信息</span>
     </ion-item>
-    <ion-item (click)="fingerprint();">
+    <ion-item (click)="fingerprint();" *ngIf="false">
       <ion-icon name="finger-print" item-start class="theme-icon"></ion-icon>
       <span class="text">指纹认证</span>
     </ion-item>
     <ion-item (click)="openModalMenu();">
-      <ion-icon name="finger-print" item-start class="theme-icon"></ion-icon>
+      <ion-icon name="ios-navigate-outline" item-start class="theme-icon"></ion-icon>
       <span class="text">modal</span>
+    </ion-item>
+    <ion-item (click)="openModalMenuFromRight();">
+      <ion-icon name="ios-return-left-outline" item-start class="theme-icon"></ion-icon>
+      <span class="text">modalFromRight</span>
     </ion-item>
   </ion-list>
 </ion-content>

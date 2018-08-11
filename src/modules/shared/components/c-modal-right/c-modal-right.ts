@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController, ViewController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'c-modal',
-  templateUrl: 'c-modal.html'
+  selector: 'c-modal-right',
+  templateUrl: 'c-modal-right.html'
 })
-export class CModalComponent {
+export class CModalRightComponent {
   params;
 
   navTargets = [];
