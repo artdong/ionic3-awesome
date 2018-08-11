@@ -1,0 +1,18 @@
+<ion-header style="height: 48px;line-height:48px;text-align: center">
+  <ion-navbar>
+    <ion-title>分享到</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+  <ion-row>
+    <ion-col class="col" *ngFor="let navTarget of navTargets" (click)="onClickTarget(navTarget)">
+      <div>
+        <!-- <div class="div-img">
+          <img class="img" [src]="navTarget.navigationTargetImagePath" />
+        </div> -->
+        <ion-icon name="{{navTarget.navigationTargetImagePath}}" class="div-img"></ion-icon>
+        <div class="div-name">{{navTarget.navigationTargetName}}</div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
