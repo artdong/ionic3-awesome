@@ -25,6 +25,7 @@ import {
   ModalFromBottomEnter, ModalFromBottomLeave, ModalFromRightEnter, ModalFromRightLeave, ModalScaleEnter,
   ModalScaleLeave
 } from './modal-transitions';
+import { BabylonConfigProvider } from '../providers/providers';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CToastProvider,
     FingerprintAIO,
-    WeatherProvider
+    WeatherProvider,
+    BabylonConfigProvider
   ]
 })
 export class AppModule {
