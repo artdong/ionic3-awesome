@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, ActionSheetController, Modal, ModalController } from 'ionic-angular';
 import { CToastProvider, ThemeService } from '../../providers/providers';
 import { QQSDK, QQShareOptions } from '@ionic-native/qqsdk';
-import { CModalComponent } from '../../modules/shared/components/index';
+import { CModalComponent, CModalRightComponent } from '../../modules/shared/components/index';
 
 @IonicPage({name: 'tabs-home'})
 @Component({
@@ -242,6 +242,24 @@ export class HomePage {
     });
   }
 
+  openModalFromRight() {
+    this.mds = this.modalController.create(CModalRightComponent, {
+      navigationDockId: 1
+    }, {
+      showBackdrop: true,
+      enableBackdropDismiss: true,
+      // cssClass: 'custom-modal',
+      enterAnimation: 'modal-from-right-enter',
+      leaveAnimation: 'modal-from-right-leave'
+    });
+    this.mds.onDidDismiss(data => {
+      this.showModal = false;
+    });
+    this.mds.present().then(data => {
+      this.showModal = true;
+    });
+  }
+
   closeModel() {
     if (this.mds && this.showModal) {
       this.mds.dismiss();
@@ -253,6 +271,14 @@ export class HomePage {
       this.mds.dismiss();
     } else {
       this.openModal();
+    }
+  }
+
+  openModalMenuFromRight() {
+    if (this.mds && this.showModal) {
+      this.mds.dismiss();
+    } else {
+      this.openModalFromRight();
     }
   }
 }
