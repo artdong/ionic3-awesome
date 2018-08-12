@@ -281,4 +281,8 @@ export class HomePage {
       this.openModalFromRight();
     }
   }
+
+  goEcharts() {
+    this.navCtrl.push('page-echart-pie');
+  }
 }
