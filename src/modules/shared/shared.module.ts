@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 import { CommonModule } from '@angular/common';
-import { QrCodeComponent, Grid9Component, CToastComponent, CModalComponent } from './components/index';
+import { QrCodeComponent, Grid9Component, CToastComponent, CModalComponent, EchartComponent } from './components/index';
 import { CModalRightComponent } from './components/c-modal-right/c-modal-right';
 
 @NgModule({
@@ -10,7 +10,8 @@ import { CModalRightComponent } from './components/c-modal-right/c-modal-right';
     Grid9Component,
     CToastComponent,
     CModalComponent,
-    CModalRightComponent
+    CModalRightComponent,
+    EchartComponent
   ],
   imports: [
     IonicModule,
@@ -20,12 +21,14 @@ import { CModalRightComponent } from './components/c-modal-right/c-modal-right';
     QrCodeComponent,
     Grid9Component,
     CToastComponent,
-    CModalComponent
+    CModalComponent,
+    EchartComponent
   ],
   entryComponents: [
     CToastComponent,
     CModalComponent,
-    CModalRightComponent
+    CModalRightComponent,
+    EchartComponent
   ],
   providers: [
   ]
