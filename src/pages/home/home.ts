@@ -283,6 +283,6 @@ export class HomePage {
   }
 
   goEcharts() {
-    this.navCtrl.push('page-echart-pie');
+    this.navCtrl.push('page-echarts');
   }
 }

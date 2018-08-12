@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { SharedModule } from '../../../modules/index';
-import { EchartPiePage } from './echart-pie';
+import { SharedModule } from '../../modules/index';
+import { EchartsPage } from './echarts';
 
 @NgModule({
   declarations: [
-    EchartPiePage
+    EchartsPage
   ],
   imports: [
-    IonicPageModule.forChild(EchartPiePage),
+    IonicPageModule.forChild(EchartsPage),
     SharedModule
   ],
   entryComponents: [
-    EchartPiePage
+    EchartsPage
   ],
   providers: [
   ],
   exports: [
-    EchartPiePage
+    EchartsPage
   ]
 })
-export class AboutModule {}
+export class EchartsPageModule {}

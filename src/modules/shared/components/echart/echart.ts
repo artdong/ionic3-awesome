@@ -15,12 +15,16 @@ export class EchartComponent {
   @Input() option;
 
   ngAfterViewInit() {
-    this.drawEchart(this.option);
+    if (this.option) {
+      this.drawEchart(this.option);
+    }
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if ('option' in changes) {
-      this.drawEchart(this.option);
+      if (this.option) {
+        this.drawEchart(this.option);
+      }
     }
   }
 
