@@ -31,5 +31,12 @@ export class EchartComponent {
   drawEchart(option) {
     const eChart = echarts.init(this.element.nativeElement.querySelector('#eChart'));
     eChart.setOption(option);
+    eChart.off('click');
+    eChart.on('click', (params) => {
+      console.log('params: ' + JSON.stringify(params.data));
+      if (params.data.url) {
+        this.navCtrl.push(params.data.url);
+      }
+    });
   }
 }
