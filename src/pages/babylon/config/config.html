@@ -1,0 +1,30 @@
+<!--
+  Template for the ConfigPage page.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list *ngIf="colors">
+    <ion-item>
+      <ion-label>Die 1 color:</ion-label>
+      <ion-select interface="popover" [(ngModel)]="colorOne" (ionChange)="onChangeOne(colorOne)">
+        <ion-option *ngFor="let c of colors; let i = index;" [selected]="i==colorOne" [value]="i">{{c.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Die 2 color:</ion-label>
+      <ion-select interface="popover" [(ngModel)]="colorTwo" (ionChange)="onChangeTwo(colorTwo)">
+        <ion-option *ngFor="let c of colors; let i = index;" [selected]="i==colorTwo" [value]="i">{{c.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

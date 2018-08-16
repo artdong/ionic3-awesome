@@ -285,4 +285,8 @@ export class HomePage {
   goEcharts() {
     this.navCtrl.push('page-echarts');
   }
+
+  goBabylon() {
+    this.navCtrl.push('page-babylon');
+  }
 }

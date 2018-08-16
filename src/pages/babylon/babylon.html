@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Babylon</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <canvas id="surface" #surface ion-fixed></canvas>
+  <ion-fab bottom right>
+    <button ion-fab color="dark" transparent (tap)="rollEm($event)"><ion-icon name="refresh"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom left>
+    <button ion-fab color="dark" transparent (tap)="settings($event)"><ion-icon name="settings"></ion-icon></button>
+  </ion-fab>
+</ion-content>
