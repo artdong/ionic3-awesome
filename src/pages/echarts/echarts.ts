@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import * as echarts from 'echarts';
 
 @IonicPage({name: 'page-echarts'})
@@ -14,7 +14,7 @@ export class EchartsPage {
   bar_option: object;
   pieChart: any;
 
-  constructor(private element: ElementRef) {
+  constructor(private navCtrl: NavController, private element: ElementRef) {
     let that = this;
     window.onresize = function() {
       that.pieChart.resize();
@@ -213,7 +213,10 @@ export class EchartsPage {
     this.pieChart.setOption(option);
     this.pieChart.off('click');
     this.pieChart.on('click', (params) => {
-       console.log('params: ' + JSON.stringify(params.data));
+      console.log('params: ' + JSON.stringify(params.data));
+      if (params.data.url) {
+        this.navCtrl.push(params.data.url);
+      }
     });
   }
 }
