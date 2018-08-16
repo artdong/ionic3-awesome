@@ -12,8 +12,13 @@ export class EchartsPage {
   column_option: object;
   line_option: object;
   bar_option: object;
+  pieChart: any;
 
   constructor(private element: ElementRef) {
+    let that = this;
+    window.onresize = function() {
+      that.pieChart.resize();
+    };
   }
 
   ionViewWillEnter() {
@@ -200,14 +205,14 @@ export class EchartsPage {
         }
       ]
     };
-    // this.drawEchart(this.pie_option);
+    this.drawPieEchart(this.pie_option);
   }
 
-  drawEchart(option) {
-    const pieChart = echarts.init(this.element.nativeElement.querySelector('#pieChart'));
-    pieChart.setOption(option);
-    pieChart.off('click');
-    pieChart.on('click', (params) => {
+  drawPieEchart(option) {
+    this.pieChart = echarts.init(this.element.nativeElement.querySelector('#pieChart'));
+    this.pieChart.setOption(option);
+    this.pieChart.off('click');
+    this.pieChart.on('click', (params) => {
        console.log('params: ' + JSON.stringify(params.data));
     });
   }
