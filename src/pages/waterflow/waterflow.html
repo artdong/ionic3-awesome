@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>瀑布流</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div id="container">
+    <div class="box" *ngFor="let image of img_data">
+      <div class="box_img">
+        <img src="{{image.src}}" alt="">
+      </div>
+    </div>
+  </div>
+</ion-content>

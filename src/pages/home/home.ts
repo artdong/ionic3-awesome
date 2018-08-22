@@ -289,4 +289,8 @@ export class HomePage {
   goBabylon() {
     this.navCtrl.push('page-babylon');
   }
+
+  goWaterflow() {
+    this.navCtrl.push('page-waterflow');
+  }
 }
