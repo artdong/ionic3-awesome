@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import * as echarts from 'echarts';
 
 @IonicPage({name: 'page-echarts'})
@@ -12,8 +12,13 @@ export class EchartsPage {
   column_option: object;
   line_option: object;
   bar_option: object;
+  pieChart: any;
 
-  constructor(private element: ElementRef) {
+  constructor(private navCtrl: NavController, private element: ElementRef) {
+    let that = this;
+    window.onresize = function() {
+      that.pieChart.resize();
+    };
   }
 
   ionViewWillEnter() {
@@ -58,7 +63,7 @@ export class EchartsPage {
           radius: '55%',
           center: ['50%', '60%'],
           data: [
-            {value: 335, name: '直接访问'},
+            {value: 335, name: '二维码（可跳转）', url: 'page-qrcode', params: {userId: 100001}},
             {value: 310, name: '邮件营销'},
             {value: 234, name: '联盟广告'},
             {value: 135, name: '视频广告'},
@@ -200,11 +205,18 @@ export class EchartsPage {
         }
       ]
     };
-    // this.drawEchart(this.pie_option);
+    this.drawPieEchart(this.pie_option);
   }
 
-  drawEchart(option) {
-    const pieChart = echarts.init(this.element.nativeElement.querySelector('#pieChart'));
-    pieChart.setOption(option);
+  drawPieEchart(option) {
+    this.pieChart = echarts.init(this.element.nativeElement.querySelector('#pieChart'));
+    this.pieChart.setOption(option);
+    this.pieChart.off('click');
+    this.pieChart.on('click', (params) => {
+      console.log('params: ' + JSON.stringify(params.data));
+      if (params.data.url) {
+        this.navCtrl.push(params.data.url);
+      }
+    });
   }
 }

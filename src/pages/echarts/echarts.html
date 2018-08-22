@@ -4,9 +4,8 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <echart [option]="pie_option"></echart>
-  <echart [option]="column_option"></echart>
-  <echart [option]="line_option"></echart>
-  <echart [option]="bar_option"></echart>
-  <!--<div id="pieChart" style="height: 20%;"></div>-->
+  <div id="pieChart" style="height: 20%;"></div>
+  <echart id="column_chart" [option]="column_option"></echart>
+  <echart id="line_chart" [option]="line_option"></echart>
+  <echart id="bar_chart" [option]="bar_option"></echart>
 </ion-content>

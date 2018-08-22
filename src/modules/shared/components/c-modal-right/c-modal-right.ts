@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ViewController, NavParams } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'c-modal-right',
@@ -10,7 +10,7 @@ export class CModalRightComponent {
 
   navTargets = [];
 
-  constructor(private navParams: NavParams,
+  constructor(// private navParams: NavParams,
               // private navCtrl: NavController,
               private view: ViewController) {
   }
