@@ -13,7 +13,7 @@
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  传送门1：[vue2-admin-grace优雅的后台管理系统](https://github.com/artdong/vue2-admin-grace)
+>  传送门1：[vue2-admin-grace优雅的后台管理系统](https://github.com/artdong/vue-admin)
 
 >  传送门2：[微信小程序——前端排行榜](https://github.com/artdong/weapp-web-rank)
 
