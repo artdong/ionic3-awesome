@@ -7,10 +7,13 @@
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
+    "lint": "tslint -c tslint.json -p tsconfig.json public --fix",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "@angular/animations": "5.2.9",
     "@angular/common": "5.2.9",
@@ -49,6 +52,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.9",
+    "pre-commit": "^1.2.2",
     "tslint": "^5.10.0",
     "tslint-config-alloy": "^0.1.0",
     "tslint-eslint-rules": "^5.3.1",
