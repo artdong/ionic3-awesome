@@ -1,3 +1,9 @@
+[![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/artdong/ionic3-awesome/blob/master/README.md)
+[![mnt-image](https://img.shields.io/maintenance/yes/2019.svg)](../../commits/master)
+[![GitHub stars](https://img.shields.io/github/stars/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/network)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/artdong/ionic3-awesome/blob/master/LICENSE)
+
 # ionic3-awesome
 
 ## About
