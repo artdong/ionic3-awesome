@@ -1,15 +1,14 @@
-[![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/artdong/ionic3-awesome/blob/master/README.md)
-[![mnt-image](https://img.shields.io/maintenance/yes/2019.svg)](../../commits/master)
-[![GitHub stars](https://img.shields.io/github/stars/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/network)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/artdong/ionic3-awesome/blob/master/LICENSE)
-
 # ionic3-awesome
 
 ## About
 
 此项目是ionic3开源项目 。贡献代码请提供email。
 
+[![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/artdong/ionic3-awesome/blob/develop/README.md)
+[![mnt-image](https://img.shields.io/maintenance/yes/2019.svg)](../../commits/develop)
+[![GitHub stars](https://img.shields.io/github/stars/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/network)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/artdong/ionic3-awesome/blob/develop/LICENSE)
 
 ## 来了就留个 :feet:吧，star一下证明你来过  :stuck_out_tongue_closed_eyes:
 
