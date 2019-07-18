@@ -57,7 +57,7 @@ ionic cordova run build ios (安卓打包发布)
 
 ![动态图](https://github.com/artdong/ionic3-awesome/blob/develop/src/assets/screen/ionic3-awesome-v0.14.gif?raw=true)
 
-#### 欢迎关注我的微信公众号或头条号`全栈弄潮儿` ，获取更多学习资源及技术文章等
+#### 欢迎关注微信公众号`全栈弄潮儿` ，获取更多学习资源及技术文章等
 
 * 微信公众号二维码，扫一扫或者搜索"全栈弄潮儿"即可关注
 
