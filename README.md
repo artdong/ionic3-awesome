@@ -20,7 +20,7 @@
 
 >  传送门1：[vue2-admin-grace优雅的后台管理系统](https://github.com/artdong/vue-admin)
 
->  传送门2：[微信小程序——前端排行榜](https://github.com/artdong/weapp-web-rank)
+>  传送门2：[前端经典面试题整理，每日更新](https://github.com/daily-interview/fe-interview)
 
 >  传送门3：[ionic2-janalytics(ionic native插件)](https://github.com/artdong/ionic2-janalytics)
 
@@ -63,6 +63,6 @@ ionic cordova run build ios (安卓打包发布)
 
 <img src="https://github.com/artdong/weapp-web-rank/blob/master/images/qrcode.png" width="320px" style="display:inline;">
 
-#### 前端最火框架排行榜——小程序二维码
+##### 脑筋急转弯（微信小程序）
 
-<img src="https://github.com/artdong/weapp-web-rank/blob/master/images/gh_web-rank.jpg" width="320px" style="display:inline;">
+<img src="https://upload-images.jianshu.io/upload_images/3100736-8679464618a2cd66.jpg" width="260px" style="display:inline;">
