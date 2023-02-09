@@ -4,7 +4,7 @@
 
 此项目是ionic3开源项目 。贡献代码请提供email。
 
-[![mnt-image](https://img.shields.io/maintenance/yes/2021.svg)](../../commits/develop)
+[![mnt-image](https://img.shields.io/maintenance/yes/2023.svg)](../../commits/develop)
 [![GitHub stars](https://img.shields.io/github/stars/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/artdong/ionic3-awesome.svg)](https://github.com/artdong/ionic3-awesome/network)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/artdong/ionic3-awesome/blob/develop/LICENSE)
