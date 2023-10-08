@@ -58,12 +58,28 @@ ionic cordova run build ios (安卓打包发布)
 
 ![动态图](https://github.com/artdong/ionic3-awesome/blob/develop/src/assets/screen/ionic3-awesome-v0.14.gif?raw=true)
 
-#### 欢迎关注微信公众号`全栈弄潮儿` ，获取更多学习资源及技术文章等
+#### 欢迎关注我的微信公众号`全栈弄潮儿` ，获取更多学习资源及技术文章等
 
 * 微信公众号二维码，扫一扫或者搜索"全栈弄潮儿"即可关注
 
-<img src="https://github.com/artdong/weapp-web-rank/blob/master/images/qrcode.png" width="320px" style="display:inline;">
+<p align='center'>
+  <img src="https://upload-images.jianshu.io/upload_images/3100736-ddcf3f57a7be2ad1.jpg" width="260px" style="display:inline;">
+</p>
 
-##### 脑筋急转弯（微信小程序）
+#### 脑筋急转弯（微信小程序）
 
-<img src="https://upload-images.jianshu.io/upload_images/3100736-8679464618a2cd66.jpg" width="260px" style="display:inline;">
+<p align='center'>
+  <img src="https://upload-images.jianshu.io/upload_images/3100736-8679464618a2cd66.jpg" width="260px" style="display:inline;">
+</p>
+
+#### 薅羊毛，大额红包码
+
+<p align='center'>
+<img src='https://upload-images.jianshu.io/upload_images/3100736-e1e4b012ad617601.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' width='280' alt='Build errors'>
+</p>
+
+#### 打赏，请作者喝一杯咖啡
+
+<p align='center'>
+<img src='https://upload-images.jianshu.io/upload_images/3100736-46a28aed4ded25e4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' width='280' alt='Build errors'>
+</p>
